@@ -1,4 +1,4 @@
-# ainex_xyz_results
+# ainex_xyz_result
 
 Experiment results for the AiNex BT stack. Code lives in a **separate** repository
 (`ainex_xyz`, working copy `/home/pi`); this repo holds only what runs produce.
@@ -13,7 +13,13 @@ results/<body_id>/<run_id>/
 index/<body_id>.jsonl  one line per run, appended at publish time
 ```
 
-`run_id` is `<UTC timestamp>_<variant>_t<trial>`, e.g. `20260811T2014Z_ablA_t1`.
+`run_id` is `<UTC timestamp>_<variant>_t<trial>`, e.g. `20260811T201400Z_ablA_t1`.
+`body_id` is the robot's WiFi access point SSID, e.g. `HW-ROBOPARKS676EF55C` — see
+`xyz_behavior/config/bodies/README.md` for why that and not the hostname.
+
+**Publish before runs age out.** A body keeps only the newest 10 run directories in
+`xyz_behavior/log/runs/`; the BT node deletes older ones at startup whether or not they
+were published. This repository is where a run becomes permanent.
 
 ## Why the path is partitioned by body, and why there are no per-body branches
 
