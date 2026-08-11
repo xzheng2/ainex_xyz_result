@@ -46,10 +46,17 @@ being described.
 
 ## Reproducibility contract
 
-`run_meta.json` records `git.dirty` — whether the code working tree had uncommitted
-changes when the run started. **A run with `dirty: true` is not reproducible**: the code
-that produced it does not exist under any commit. Such runs are fine for exploration and
-must not be used as evidence in an ablation table.
+`run_meta.json` records `git.dirty` — whether the code that the robot actually runs had
+uncommitted changes when the run started. **A run with `dirty: true` is not reproducible**:
+the code that produced it does not exist under any commit. Such runs are fine for
+exploration and must not be used as evidence in an ablation table.
+
+`dirty` is **scoped**, and the scope is recorded next to it in `git.dirty_scope`
+(currently `docker/ros_ws_src` — the ROS workspace). The code repository's root is a home
+directory that also holds development tooling no running node ever loads, so a change
+there does not make a run irreproducible. Counting it would leave the flag permanently on,
+and a warning that is always on is a warning nobody reads. `git.repo_dirty` keeps the
+whole-repository state as information only, without a path list.
 
 ## Publishing a run
 
