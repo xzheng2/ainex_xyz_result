@@ -1,0 +1,9 @@
+# Results are text and should stay text.
+# Large binaries (rosbag, video) do not belong in git — keep them on the body and
+# reference them from run_meta.json by path + checksum.
+*.bag
+*.mp4
+*.png
+*.jpg
+__pycache__/
+*.pyc
