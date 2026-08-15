@@ -128,8 +128,10 @@ log is a measurement, not a failure: the lanes without the skills+hooks engine h
 guards to fire, and that zero is the control.
 
 **Publish before runs age out.** A body keeps only the newest 10 run directories in
-`xyz_behavior/log/runs/`; the BT node deletes older ones at startup whether or not they
-were published. This repository is where a run becomes permanent.
+`xyz_behavior/log/runs/`; opening run 11 with `tools/new_run.py` deletes run 1, whether or
+not it was published. The pruning happens there and nowhere else — `prune_runs()` is
+reached only through `open_run_dir()`, which only `new_run.py` calls; the BT node just
+creates the directory it was handed. This repository is where a run becomes permanent.
 
 ## Why the path is partitioned by writer, and why there are no per-writer branches
 
