@@ -64,7 +64,7 @@ start a third experiment, and that package must stay byte-identical across all f
 Written by `xyz_behavior/tools/close_run.py`. Two halves, and the second is the reason a
 human is in the loop at all.
 
-*Reduced from the logs* (`xyz_run_lab/run_lab/run_metrics.py`):
+*Reduced from the logs* (`expt_run_lab/run_lab/run_metrics.py`):
 
 | field | meaning |
 |---|---|
@@ -88,7 +88,7 @@ primary outcome.
 
 `run_id` is `<UTC timestamp>_<variant>_t<trial>`, e.g. `20260811T201400Z_ablA_t1`.
 `body_id` is the robot's WiFi access point SSID, e.g. `HW-ROBOPARKS676EF55C` — see
-`xyz_run_lab/config/bodies/README.md` for why that and not the hostname.
+`expt_run_lab/config/bodies/README.md` for why that and not the hostname.
 
 ### `session_metrics.json` (`ainex.session_metrics/1`)
 
@@ -183,7 +183,7 @@ same way `dirty: true` runs are excluded.
 ### `constants_sha256` — the instrument, not the subject
 
 `run_meta.json` also records `constants_sha256`: a digest per tree that is supposed to be
-**identical across all four lanes** — `xyz_run_lab` (the measuring apparatus itself),
+**identical across all four lanes** — `expt_run_lab` (the measuring apparatus itself),
 `xyz_perception`, and the agent's `.claude/hooks` and `.claude/skills`. Two lanes whose
 runs disagree on any of these were not running the same instrument, and comparing them
 measures the instrument as much as the engine. Check it before building any cross-lane
@@ -198,7 +198,7 @@ is `/home/ubuntu`, so the host's `.claude/` is genuinely not visible. That is ex
 is not the same as a mismatch.
 
 **Why a digest and not just a lock.** The lane cards carry a `permissions.deny` block that
-stops the `Write` and `Edit` tools from touching `xyz_run_lab` and `xyz_perception`. That
+stops the `Write` and `Edit` tools from touching `expt_run_lab` and `xyz_perception`. That
 lock is real but partial: it is scoped to those two tools, so anything going through
 `Bash` — `sed -i`, `python3 -c`, a redirect — is outside it, and the same is true of a
 human at a shell. Widening the rules cannot close that; a coding agent legitimately needs
