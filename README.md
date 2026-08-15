@@ -202,10 +202,11 @@ stops the `Edit` tool from touching `expt_run_lab` and `xyz_perception`. That lo
 but narrow: it names one tool, so `Write` reaches those paths untouched, and so does
 anything going through `Bash` — `sed -i`, `python3 -c`, a redirect — as does a human at a
 shell. Adding `Write` would close one of those gaps but not the `Bash` one, and no rule
-can: a coding agent legitimately needs `Bash`. So the deny block is a speed bump that keeps honest edits from happening by
-accident, and **`constants_sha256` is the actual backstop** — it does not prevent a
-change, it makes one undeniable after the fact, in the run's own metadata, which is the
-only place still trustworthy once the data is here and the card has moved on.
+can: a coding agent legitimately needs `Bash`. So the deny block is a speed bump that
+keeps honest edits from happening by accident, and **`constants_sha256` is the actual
+backstop** — it does not prevent a change, it makes one undeniable after the fact, in the
+run's own metadata, which is the only place still trustworthy once the data is here and
+the card has moved on.
 
 ## Reading the index
 
