@@ -1,6 +1,6 @@
 {
-  "closed_utc": "20260817T193935Z",
-  "duration_s_approx": 968.0,
+  "closed_utc": "20260817T215319Z",
+  "duration_s_approx": 3978.8,
   "dwells": {
     "sprint_arrived": {
       "latch_count": 0,
@@ -148,7 +148,7 @@
     "TagBeyondStartRange": 398,
     "TaskControl": 430
   },
-  "note": "3m \u8d77\u6b65\uff0c\u524d\u8fdb\u2192\u505c\u6b62\u2192\u540e\u9000\u2192\u505c\u6b62\u5168\u90e8\u8fbe\u6210\uff1btag id 111 size 0.15\uff1bfx=367.011",
+  "note": "3m \u8d77\u6b65\uff1b\u524d\u8fdb\u2192\u505c\u6b62\u2192\u540e\u9000\u2192\u505c\u6b62\u5168\u90e8\u8fbe\u6210\uff1btag 111 size \n  0.15m\uff1bfx=367.011\uff1bTAG_AREA_STOP=12100(\u22480.5m) START=340(\u22483.0m)",
   "outcome": "success",
   "root_status_counts": {
     "RUNNING": 434
