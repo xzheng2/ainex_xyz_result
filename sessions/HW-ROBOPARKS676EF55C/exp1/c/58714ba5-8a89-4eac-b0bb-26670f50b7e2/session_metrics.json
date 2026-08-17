@@ -1,0 +1,75 @@
+{
+  "api_responses": 65,
+  "clarification_answer_free_text": 0,
+  "clarification_answered": 6,
+  "clarification_calls": 2,
+  "clarification_questions": 6,
+  "clarification_rejected": 0,
+  "duration_s": 4154,
+  "file_path_calls": 18,
+  "files_touched": 18,
+  "first_ts": "2026-08-17T16:36:46.993Z",
+  "guard": {
+    "by_action": {
+      "pass": 9,
+      "reminder": 4,
+      "warned": 1
+    },
+    "by_rule": {
+      "behavior.tree.missing_groot": 1,
+      "behavior_pre._groot.xml": 1,
+      "behavior_pre.app/": 1,
+      "behavior_pre.launch/": 1,
+      "behavior_pre.tree/": 1,
+      "coverage.behavior.app": 1,
+      "coverage.behavior.launch": 1,
+      "coverage.behavior.tree": 1,
+      "coverage.build": 1,
+      "coverage.tree": 1
+    },
+    "events": 14,
+    "fix_on_first_retry": null,
+    "fixed_next_write": 0,
+    "no_following_write": 1,
+    "not_fixed_next_write": 0
+  },
+  "human_turns": 1,
+  "last_ts": "2026-08-17T17:46:00.648Z",
+  "lines": 278,
+  "prose_question_blocks": 0,
+  "prose_question_turns": 0,
+  "rework_events": 0,
+  "rework_files": 0,
+  "schema": "ainex.session_metrics/1",
+  "subagent_count": 2,
+  "subagent_types": {
+    "Explore": 2
+  },
+  "tokens": {
+    "cache_creation": 169729,
+    "cache_read": 4179666,
+    "input": 66,
+    "output": 64497,
+    "total": 4413958
+  },
+  "tokens_subagent": {
+    "cache_creation": 212135,
+    "cache_read": 1933454,
+    "input": 64,
+    "output": 229,
+    "total": 2145882
+  },
+  "tool_calls_by_name": {
+    "Agent": 2,
+    "AskUserQuestion": 2,
+    "Bash": 77,
+    "Edit": 1,
+    "ExitPlanMode": 1,
+    "Read": 11,
+    "Skill": 1,
+    "ToolSearch": 1,
+    "Write": 6
+  },
+  "tool_calls_total": 102,
+  "tool_errors": 2
+}
