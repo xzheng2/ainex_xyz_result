@@ -1,6 +1,6 @@
 {
-  "closed_utc": "20260817T215319Z",
-  "duration_s_approx": 3978.8,
+  "closed_utc": "20260817T221517Z",
+  "duration_s_approx": 11933.8,
   "dwells": {
     "sprint_arrived": {
       "latch_count": 0,
@@ -148,7 +148,7 @@
     "TagBeyondStartRange": 398,
     "TaskControl": 430
   },
-  "note": "3m \u8d77\u6b65\uff1b\u524d\u8fdb\u2192\u505c\u6b62\u2192\u540e\u9000\u2192\u505c\u6b62\u5168\u90e8\u8fbe\u6210\uff1btag 111 size \n  0.15m\uff1bfx=367.011\uff1bTAG_AREA_STOP=12100(\u22480.5m) START=340(\u22483.0m)",
+  "note": "3m start; approach-stop-reverse-stop all achieved; tag111 0.15m; fx=367.011; STOP=12100px2(0.5m) START=340px2(3.0m)",
   "outcome": "success",
   "root_status_counts": {
     "RUNNING": 434
