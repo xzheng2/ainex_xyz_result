@@ -1,0 +1,49 @@
+{
+  "body_id": "HW-ROBOPARKS676EF55C",
+  "cli_versions": [
+    "2.1.226"
+  ],
+  "cwd": "/home/pi",
+  "exported_utc": "20260818T202317Z",
+  "git": {
+    "available": true,
+    "branch": "lane-c-t2",
+    "describe": "lane-c-sprint-t2",
+    "dirty": false,
+    "dirty_count": 0,
+    "dirty_digest": null,
+    "dirty_sample": [],
+    "dirty_scope": [
+      "docker/ros_ws_src"
+    ],
+    "repo_dirty": false,
+    "repo_dirty_count": 0,
+    "root": "/home/pi",
+    "sha": "60318150cecdc86ee39be983e8c597fd9f5cb05b",
+    "subject": "lane c: sprint project built by agent (t2, repeat trial)"
+  },
+  "lane": "c",
+  "main_transcript": true,
+  "schema": "ainex.session_meta/1",
+  "session_id": "a844dd34-ff14-4372-a844-6529edeea550",
+  "slug": "create-a-sprint-event-vast-seal",
+  "study": "exp1",
+  "subagents": [
+    {
+      "agent_id": "a0f62452f08e2fda8",
+      "agent_type": "Explore",
+      "description": "Explore tooling and launch patterns",
+      "lines": 84,
+      "spawn_depth": 1,
+      "tool_use_id": "toolu_012K1G3cCCSDYYP2jdzcVxFR"
+    },
+    {
+      "agent_id": "af974e18c3422dc13",
+      "agent_type": "Explore",
+      "description": "Explore BT projects and apriltag",
+      "lines": 64,
+      "spawn_depth": 1,
+      "tool_use_id": "toolu_01R6auuSUuWqsKRhxt2Ca1pz"
+    }
+  ]
+}
