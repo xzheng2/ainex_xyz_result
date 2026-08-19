@@ -1,0 +1,630 @@
+{"event": "tree_tick_start", "tick_id": 452, "ts": 1787173757.8714936}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 452, "node": "IsStanding", "level": "L1", "ts": 1787173757.8716366}
+{"event": "tick_end", "tick_id": 452, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173757.871683}
+{"event": "tick_end", "tick_id": 452, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173757.8717494}
+{"event": "tick_end", "tick_id": 452, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173757.8717742}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 3}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 452, "node": "TagDetected", "level": "L1", "ts": 1787173757.871826}
+{"event": "tick_end", "tick_id": 452, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173757.8718603}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 452, "node": "DriveTag", "level": "L2", "ts": 1787173757.8718896}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 302, "depth_mm": 2551.0, "fresh": false, "error_x": null, "no_depth_ticks": 2, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2551 < 2800 mm", "tick_id": 452, "node": "DriveTag", "level": "L2", "ts": 1787173757.872191}
+{"event": "tick_end", "tick_id": 452, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173757.8722265}
+{"event": "tick_end", "tick_id": 452, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173757.8722482}
+{"event": "tick_end", "tick_id": 452, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173757.8722675}
+{"event": "tick_end", "tick_id": 452, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173757.8722854}
+{"event": "tree_tick_end", "tick_id": 452, "status": "Status.RUNNING", "ts": 1787173757.8728006}
+{"event": "bb_write", "tick_id": 452, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 263.0, 'y': 271.5, 'error_x': -57.0, 'error_y': 31.5, 'size': 888.0, 'turn_bias_deg': 2.8624052261117474, 'tag_id': 111, 'direction': '', 'depth_mm': 2551.0, 'depth_m': 2.551, 'cam_x_m': -0.36685743302056145, 'cam_y_m': 0.23890101398731134, 'cam_z_m': 2.551, 'lost_count': 3, 'displacement': None}}", "ts": 1787173757.8728604}
+{"event": "bb_write", "tick_id": 452, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": NaN, "ts": 1787173757.8728852}
+{"event": "bb_write", "tick_id": 452, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173757.8729029}
+{"event": "bb_write", "tick_id": 452, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": -1, "ts": 1787173757.872919}
+{"event": "bb_write", "tick_id": 452, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173757.872935}
+{"event": "bb_write", "tick_id": 452, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 452}", "ts": 1787173757.8729537}
+{"event": "bb_write", "tick_id": 452, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 302, 'last_depth_mm': 2551.0, 'no_depth_ticks': 2}", "ts": 1787173757.8729732}
+{"event": "tree_tick_start", "tick_id": 453, "ts": 1787173757.9704525}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 453, "node": "IsStanding", "level": "L1", "ts": 1787173757.970622}
+{"event": "tick_end", "tick_id": 453, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173757.9706802}
+{"event": "tick_end", "tick_id": 453, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173757.970748}
+{"event": "tick_end", "tick_id": 453, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173757.9707744}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 453, "node": "TagDetected", "level": "L1", "ts": 1787173757.9708319}
+{"event": "tick_end", "tick_id": 453, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173757.9708698}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 453, "node": "DriveTag", "level": "L2", "ts": 1787173757.9709005}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 303, "depth_mm": 2434.0, "fresh": true, "error_x": -6.0, "no_depth_ticks": 0, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2434 < 2800 mm", "tick_id": 453, "node": "DriveTag", "level": "L2", "ts": 1787173757.971225}
+{"event": "tick_end", "tick_id": 453, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173757.971262}
+{"event": "tick_end", "tick_id": 453, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173757.9712834}
+{"event": "tick_end", "tick_id": 453, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173757.971302}
+{"event": "tick_end", "tick_id": 453, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173757.9713204}
+{"event": "tree_tick_end", "tick_id": 453, "status": "Status.RUNNING", "ts": 1787173757.9719646}
+{"event": "bb_write", "tick_id": 453, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 314.0, 'y': 259.5, 'error_x': -6.0, 'error_y': 19.5, 'size': 885.5, 'turn_bias_deg': -1.9414863909143774, 'tag_id': 111, 'direction': '', 'depth_mm': 2434.0, 'depth_m': 2.434, 'cam_x_m': -0.011802429656247995, 'cam_y_m': 0.1483224527235467, 'cam_z_m': 2.434, 'lost_count': 0, 'displacement': None}}", "ts": 1787173757.9720364}
+{"event": "bb_write", "tick_id": 453, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": -1.9414863909143774, "ts": 1787173757.972064}
+{"event": "bb_write", "tick_id": 453, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173757.972083}
+{"event": "bb_write", "tick_id": 453, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173757.9721003}
+{"event": "bb_write", "tick_id": 453, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173757.9721167}
+{"event": "bb_write", "tick_id": 453, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 453}", "ts": 1787173757.9721358}
+{"event": "bb_write", "tick_id": 453, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 303, 'last_depth_mm': 2434.0, 'no_depth_ticks': 0}", "ts": 1787173757.9721553}
+{"event": "tree_tick_start", "tick_id": 454, "ts": 1787173758.0711699}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 454, "node": "IsStanding", "level": "L1", "ts": 1787173758.0714304}
+{"event": "tick_end", "tick_id": 454, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173758.0715067}
+{"event": "tick_end", "tick_id": 454, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173758.0716007}
+{"event": "tick_end", "tick_id": 454, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173758.0716321}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 454, "node": "TagDetected", "level": "L1", "ts": 1787173758.071699}
+{"event": "tick_end", "tick_id": 454, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173758.072097}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 454, "node": "DriveTag", "level": "L2", "ts": 1787173758.0721567}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 304, "depth_mm": 2646.0, "fresh": true, "error_x": -10.5, "no_depth_ticks": 0, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2646 < 2800 mm", "tick_id": 454, "node": "DriveTag", "level": "L2", "ts": 1787173758.0729592}
+{"event": "tick_end", "tick_id": 454, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173758.073012}
+{"event": "tick_end", "tick_id": 454, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.0730376}
+{"event": "tick_end", "tick_id": 454, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173758.0730584}
+{"event": "tick_end", "tick_id": 454, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.0730765}
+{"event": "tree_tick_end", "tick_id": 454, "status": "Status.RUNNING", "ts": 1787173758.07376}
+{"event": "bb_write", "tick_id": 454, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 309.5, 'y': 250.0, 'error_x': -10.5, 'error_y': 10.0, 'size': 855.5, 'turn_bias_deg': -2.96093613416375, 'tag_id': 111, 'direction': '', 'depth_mm': 2646.0, 'depth_m': 2.646, 'cam_x_m': -0.045273552605189255, 'cam_y_m': 0.09271735255521707, 'cam_z_m': 2.646, 'lost_count': 0, 'displacement': 8.139410298049853}}", "ts": 1787173758.0738783}
+{"event": "bb_write", "tick_id": 454, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": -2.96093613416375, "ts": 1787173758.073916}
+{"event": "bb_write", "tick_id": 454, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173758.073936}
+{"event": "bb_write", "tick_id": 454, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173758.0739536}
+{"event": "bb_write", "tick_id": 454, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173758.073972}
+{"event": "bb_write", "tick_id": 454, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 454}", "ts": 1787173758.0739944}
+{"event": "bb_write", "tick_id": 454, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 304, 'last_depth_mm': 2646.0, 'no_depth_ticks': 0}", "ts": 1787173758.0740163}
+{"event": "tree_tick_start", "tick_id": 455, "ts": 1787173758.1705093}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 455, "node": "IsStanding", "level": "L1", "ts": 1787173758.1707222}
+{"event": "tick_end", "tick_id": 455, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173758.1707852}
+{"event": "tick_end", "tick_id": 455, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173758.1708603}
+{"event": "tick_end", "tick_id": 455, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173758.1708846}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 455, "node": "TagDetected", "level": "L1", "ts": 1787173758.170937}
+{"event": "tick_end", "tick_id": 455, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173758.1709707}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 455, "node": "DriveTag", "level": "L2", "ts": 1787173758.1710007}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 305, "depth_mm": 2393.0, "fresh": true, "error_x": -8.0, "no_depth_ticks": 0, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2393 < 2800 mm", "tick_id": 455, "node": "DriveTag", "level": "L2", "ts": 1787173758.1714833}
+{"event": "tick_end", "tick_id": 455, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173758.1715279}
+{"event": "tick_end", "tick_id": 455, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.1715508}
+{"event": "tick_end", "tick_id": 455, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173758.1715698}
+{"event": "tick_end", "tick_id": 455, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.171588}
+{"event": "tree_tick_end", "tick_id": 455, "status": "Status.RUNNING", "ts": 1787173758.17259}
+{"event": "bb_write", "tick_id": 455, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 312.0, 'y': 240.5, 'error_x': -8.0, 'error_y': 0.5, 'size': 843.0, 'turn_bias_deg': -3.945186229037563, 'tag_id': 111, 'direction': '', 'depth_mm': 2393.0, 'depth_m': 2.393, 'cam_x_m': -0.02464408981768847, 'cam_y_m': 0.021880170369434928, 'cam_z_m': 2.393, 'lost_count': 0, 'displacement': 9.82344135219425}}", "ts": 1787173758.1727955}
+{"event": "bb_write", "tick_id": 455, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": -3.945186229037563, "ts": 1787173758.1729074}
+{"event": "bb_write", "tick_id": 455, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173758.1729429}
+{"event": "bb_write", "tick_id": 455, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173758.1729665}
+{"event": "bb_write", "tick_id": 455, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173758.1730232}
+{"event": "bb_write", "tick_id": 455, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 455}", "ts": 1787173758.1731215}
+{"event": "bb_write", "tick_id": 455, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 305, 'last_depth_mm': 2393.0, 'no_depth_ticks': 0}", "ts": 1787173758.1731813}
+{"event": "tree_tick_start", "tick_id": 456, "ts": 1787173758.2715666}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 456, "node": "IsStanding", "level": "L1", "ts": 1787173758.2720354}
+{"event": "tick_end", "tick_id": 456, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173758.2721314}
+{"event": "tick_end", "tick_id": 456, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173758.2722762}
+{"event": "tick_end", "tick_id": 456, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173758.27232}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 456, "node": "TagDetected", "level": "L1", "ts": 1787173758.2724028}
+{"event": "tick_end", "tick_id": 456, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173758.2724457}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 456, "node": "DriveTag", "level": "L2", "ts": 1787173758.2724795}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 306, "depth_mm": 2582.0, "fresh": true, "error_x": -25.5, "no_depth_ticks": 0, "yaw": 1, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2582 < 2800 mm", "tick_id": 456, "node": "DriveTag", "level": "L2", "ts": 1787173758.2728786}
+{"event": "tick_end", "tick_id": 456, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173758.2729232}
+{"event": "tick_end", "tick_id": 456, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.2735543}
+{"event": "tick_end", "tick_id": 456, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173758.2736442}
+{"event": "tick_end", "tick_id": 456, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.273676}
+{"event": "tree_tick_end", "tick_id": 456, "status": "Status.RUNNING", "ts": 1787173758.2748451}
+{"event": "bb_write", "tick_id": 456, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 294.5, 'y': 267.0, 'error_x': -25.5, 'error_y': 27.0, 'size': 811.5, 'turn_bias_deg': -1.0050860052541812, 'tag_id': 111, 'direction': '', 'depth_mm': 2582.0, 'depth_m': 2.582, 'cam_x_m': -0.1497065715035504, 'cam_y_m': 0.21013056565361107, 'cam_z_m': 2.582, 'lost_count': 0, 'displacement': None}}", "ts": 1787173758.2749794}
+{"event": "bb_write", "tick_id": 456, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": -1.0050860052541812, "ts": 1787173758.2750123}
+{"event": "bb_write", "tick_id": 456, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173758.2750342}
+{"event": "bb_write", "tick_id": 456, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173758.2750535}
+{"event": "bb_write", "tick_id": 456, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173758.2750711}
+{"event": "bb_write", "tick_id": 456, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 456}", "ts": 1787173758.2750943}
+{"event": "bb_write", "tick_id": 456, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 306, 'last_depth_mm': 2582.0, 'no_depth_ticks': 0}", "ts": 1787173758.275116}
+{"event": "tree_tick_start", "tick_id": 457, "ts": 1787173758.3704915}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 457, "node": "IsStanding", "level": "L1", "ts": 1787173758.370667}
+{"event": "tick_end", "tick_id": 457, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173758.3707266}
+{"event": "tick_end", "tick_id": 457, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173758.3707962}
+{"event": "tick_end", "tick_id": 457, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173758.3708205}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 457, "node": "TagDetected", "level": "L1", "ts": 1787173758.3708737}
+{"event": "tick_end", "tick_id": 457, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173758.3709075}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 457, "node": "DriveTag", "level": "L2", "ts": 1787173758.3709385}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 307, "depth_mm": 2582.0, "fresh": true, "error_x": -25.5, "no_depth_ticks": 0, "yaw": 1, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2582 < 2800 mm", "tick_id": 457, "node": "DriveTag", "level": "L2", "ts": 1787173758.3716905}
+{"event": "tick_end", "tick_id": 457, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173758.3717396}
+{"event": "tick_end", "tick_id": 457, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.371764}
+{"event": "tick_end", "tick_id": 457, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173758.3717916}
+{"event": "tick_end", "tick_id": 457, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.3718112}
+{"event": "tree_tick_end", "tick_id": 457, "status": "Status.RUNNING", "ts": 1787173758.3729222}
+{"event": "bb_write", "tick_id": 457, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 294.5, 'y': 269.5, 'error_x': -25.5, 'error_y': 29.5, 'size': 813.0, 'turn_bias_deg': 1.0050860052541812, 'tag_id': 111, 'direction': '', 'depth_mm': 2582.0, 'depth_m': 2.582, 'cam_x_m': -0.1497065715035504, 'cam_y_m': 0.22772700825408929, 'cam_z_m': 2.582, 'lost_count': 0, 'displacement': 2.5}}", "ts": 1787173758.3731563}
+{"event": "bb_write", "tick_id": 457, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": 1.0050860052541812, "ts": 1787173758.3732386}
+{"event": "bb_write", "tick_id": 457, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173758.373262}
+{"event": "bb_write", "tick_id": 457, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173758.3732862}
+{"event": "bb_write", "tick_id": 457, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173758.3733215}
+{"event": "bb_write", "tick_id": 457, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 457}", "ts": 1787173758.3733575}
+{"event": "bb_write", "tick_id": 457, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 307, 'last_depth_mm': 2582.0, 'no_depth_ticks': 0}", "ts": 1787173758.373398}
+{"event": "tree_tick_start", "tick_id": 458, "ts": 1787173758.4709594}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 458, "node": "IsStanding", "level": "L1", "ts": 1787173758.4711385}
+{"event": "tick_end", "tick_id": 458, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173758.4718208}
+{"event": "tick_end", "tick_id": 458, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173758.4720216}
+{"event": "tick_end", "tick_id": 458, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173758.4720716}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 1}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 458, "node": "TagDetected", "level": "L1", "ts": 1787173758.4726024}
+{"event": "tick_end", "tick_id": 458, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173758.4727886}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 458, "node": "DriveTag", "level": "L2", "ts": 1787173758.4728596}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 308, "depth_mm": 2582.0, "fresh": false, "error_x": null, "no_depth_ticks": 1, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2582 < 2800 mm", "tick_id": 458, "node": "DriveTag", "level": "L2", "ts": 1787173758.4736674}
+{"event": "tick_end", "tick_id": 458, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173758.4737422}
+{"event": "tick_end", "tick_id": 458, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.4737716}
+{"event": "tick_end", "tick_id": 458, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173758.4737923}
+{"event": "tick_end", "tick_id": 458, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.473811}
+{"event": "tree_tick_end", "tick_id": 458, "status": "Status.RUNNING", "ts": 1787173758.4744983}
+{"event": "bb_write", "tick_id": 458, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 297.5, 'y': 265.0, 'error_x': -22.5, 'error_y': 25.0, 'size': 843.0, 'turn_bias_deg': 1.9749340108819766, 'tag_id': 111, 'direction': '', 'depth_mm': 2662.0, 'depth_m': 2.662, 'cam_x_m': -0.13258549513613077, 'cam_y_m': 0.2021278782370001, 'cam_z_m': 2.662, 'lost_count': 1, 'displacement': None}}", "ts": 1787173758.4745805}
+{"event": "bb_write", "tick_id": 458, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": NaN, "ts": 1787173758.47463}
+{"event": "bb_write", "tick_id": 458, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173758.4746501}
+{"event": "bb_write", "tick_id": 458, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": -1, "ts": 1787173758.4746683}
+{"event": "bb_write", "tick_id": 458, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173758.4746857}
+{"event": "bb_write", "tick_id": 458, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 458}", "ts": 1787173758.4747062}
+{"event": "bb_write", "tick_id": 458, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 308, 'last_depth_mm': 2582.0, 'no_depth_ticks': 1}", "ts": 1787173758.474727}
+{"event": "tree_tick_start", "tick_id": 459, "ts": 1787173758.5704858}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 459, "node": "IsStanding", "level": "L1", "ts": 1787173758.570664}
+{"event": "tick_end", "tick_id": 459, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173758.5707157}
+{"event": "tick_end", "tick_id": 459, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173758.5707815}
+{"event": "tick_end", "tick_id": 459, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173758.5708053}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 2}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 459, "node": "TagDetected", "level": "L1", "ts": 1787173758.5708547}
+{"event": "tick_end", "tick_id": 459, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173758.5708876}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 459, "node": "DriveTag", "level": "L2", "ts": 1787173758.5709164}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 309, "depth_mm": 2582.0, "fresh": false, "error_x": null, "no_depth_ticks": 2, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2582 < 2800 mm", "tick_id": 459, "node": "DriveTag", "level": "L2", "ts": 1787173758.5714567}
+{"event": "tick_end", "tick_id": 459, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173758.5714984}
+{"event": "tick_end", "tick_id": 459, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.5715213}
+{"event": "tick_end", "tick_id": 459, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173758.5715406}
+{"event": "tick_end", "tick_id": 459, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.5715587}
+{"event": "tree_tick_end", "tick_id": 459, "status": "Status.RUNNING", "ts": 1787173758.5720806}
+{"event": "bb_write", "tick_id": 459, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 297.5, 'y': 265.0, 'error_x': -22.5, 'error_y': 25.0, 'size': 843.0, 'turn_bias_deg': 1.9749340108819766, 'tag_id': 111, 'direction': '', 'depth_mm': 2662.0, 'depth_m': 2.662, 'cam_x_m': -0.13258549513613077, 'cam_y_m': 0.2021278782370001, 'cam_z_m': 2.662, 'lost_count': 2, 'displacement': None}}", "ts": 1787173758.5721428}
+{"event": "bb_write", "tick_id": 459, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": NaN, "ts": 1787173758.5721684}
+{"event": "bb_write", "tick_id": 459, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173758.5721872}
+{"event": "bb_write", "tick_id": 459, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": -1, "ts": 1787173758.5722048}
+{"event": "bb_write", "tick_id": 459, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173758.5722215}
+{"event": "bb_write", "tick_id": 459, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 459}", "ts": 1787173758.5722406}
+{"event": "bb_write", "tick_id": 459, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 309, 'last_depth_mm': 2582.0, 'no_depth_ticks': 2}", "ts": 1787173758.5722609}
+{"event": "tree_tick_start", "tick_id": 460, "ts": 1787173758.6708364}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 460, "node": "IsStanding", "level": "L1", "ts": 1787173758.6710708}
+{"event": "tick_end", "tick_id": 460, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173758.6711383}
+{"event": "tick_end", "tick_id": 460, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173758.6712315}
+{"event": "tick_end", "tick_id": 460, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173758.6712587}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 460, "node": "TagDetected", "level": "L1", "ts": 1787173758.6713219}
+{"event": "tick_end", "tick_id": 460, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173758.6713624}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 460, "node": "DriveTag", "level": "L2", "ts": 1787173758.6713977}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 310, "depth_mm": 2662.0, "fresh": true, "error_x": 13.0, "no_depth_ticks": 0, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2662 < 2800 mm", "tick_id": 460, "node": "DriveTag", "level": "L2", "ts": 1787173758.67186}
+{"event": "tick_end", "tick_id": 460, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173758.6719012}
+{"event": "tick_end", "tick_id": 460, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.6719234}
+{"event": "tick_end", "tick_id": 460, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173758.671943}
+{"event": "tick_end", "tick_id": 460, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.6719608}
+{"event": "tree_tick_end", "tick_id": 460, "status": "Status.RUNNING", "ts": 1787173758.6726017}
+{"event": "bb_write", "tick_id": 460, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 333.0, 'y': 256.5, 'error_x': 13.0, 'error_y': 16.5, 'size': 811.5, 'turn_bias_deg': -3.0127875041833403, 'tag_id': 111, 'direction': '', 'depth_mm': 2662.0, 'depth_m': 2.662, 'cam_x_m': 0.12490245270586921, 'cam_y_m': 0.14044628153351124, 'cam_z_m': 2.662, 'lost_count': 0, 'displacement': None}}", "ts": 1787173758.6726787}
+{"event": "bb_write", "tick_id": 460, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": -3.0127875041833403, "ts": 1787173758.6727066}
+{"event": "bb_write", "tick_id": 460, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173758.6727245}
+{"event": "bb_write", "tick_id": 460, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173758.6727417}
+{"event": "bb_write", "tick_id": 460, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173758.6727583}
+{"event": "bb_write", "tick_id": 460, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 460}", "ts": 1787173758.672777}
+{"event": "bb_write", "tick_id": 460, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 310, 'last_depth_mm': 2662.0, 'no_depth_ticks': 0}", "ts": 1787173758.6727972}
+{"event": "tree_tick_start", "tick_id": 461, "ts": 1787173758.771521}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 461, "node": "IsStanding", "level": "L1", "ts": 1787173758.7716775}
+{"event": "tick_end", "tick_id": 461, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173758.7717302}
+{"event": "tick_end", "tick_id": 461, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173758.7718256}
+{"event": "tick_end", "tick_id": 461, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173758.771854}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 1}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 461, "node": "TagDetected", "level": "L1", "ts": 1787173758.7719185}
+{"event": "tick_end", "tick_id": 461, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173758.7719548}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 461, "node": "DriveTag", "level": "L2", "ts": 1787173758.7719908}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 311, "depth_mm": 2662.0, "fresh": false, "error_x": null, "no_depth_ticks": 1, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2662 < 2800 mm", "tick_id": 461, "node": "DriveTag", "level": "L2", "ts": 1787173758.7737935}
+{"event": "tick_end", "tick_id": 461, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173758.7740347}
+{"event": "tick_end", "tick_id": 461, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.774218}
+{"event": "tick_end", "tick_id": 461, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173758.7743092}
+{"event": "tick_end", "tick_id": 461, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.77442}
+{"event": "tree_tick_end", "tick_id": 461, "status": "Status.RUNNING", "ts": 1787173758.7766387}
+{"event": "bb_write", "tick_id": 461, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 333.0, 'y': 256.5, 'error_x': 13.0, 'error_y': 16.5, 'size': 811.5, 'turn_bias_deg': -3.0127875041833403, 'tag_id': 111, 'direction': '', 'depth_mm': 2662.0, 'depth_m': 2.662, 'cam_x_m': 0.12490245270586921, 'cam_y_m': 0.14044628153351124, 'cam_z_m': 2.662, 'lost_count': 1, 'displacement': None}}", "ts": 1787173758.7769852}
+{"event": "bb_write", "tick_id": 461, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": NaN, "ts": 1787173758.777084}
+{"event": "bb_write", "tick_id": 461, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173758.7771516}
+{"event": "bb_write", "tick_id": 461, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": -1, "ts": 1787173758.7772079}
+{"event": "bb_write", "tick_id": 461, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173758.7772453}
+{"event": "bb_write", "tick_id": 461, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 461}", "ts": 1787173758.7772925}
+{"event": "bb_write", "tick_id": 461, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 311, 'last_depth_mm': 2662.0, 'no_depth_ticks': 1}", "ts": 1787173758.777344}
+{"event": "tree_tick_start", "tick_id": 462, "ts": 1787173758.8713038}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 462, "node": "IsStanding", "level": "L1", "ts": 1787173758.871526}
+{"event": "tick_end", "tick_id": 462, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173758.8715906}
+{"event": "tick_end", "tick_id": 462, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173758.8716812}
+{"event": "tick_end", "tick_id": 462, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173758.8717084}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 462, "node": "TagDetected", "level": "L1", "ts": 1787173758.8717673}
+{"event": "tick_end", "tick_id": 462, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173758.8718019}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 462, "node": "DriveTag", "level": "L2", "ts": 1787173758.8718388}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 312, "depth_mm": 2629.0, "fresh": true, "error_x": 3.0, "no_depth_ticks": 0, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2629 < 2800 mm", "tick_id": 462, "node": "DriveTag", "level": "L2", "ts": 1787173758.8722796}
+{"event": "tick_end", "tick_id": 462, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173758.8723187}
+{"event": "tick_end", "tick_id": 462, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.87234}
+{"event": "tick_end", "tick_id": 462, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173758.8723595}
+{"event": "tick_end", "tick_id": 462, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.8723776}
+{"event": "tree_tick_end", "tick_id": 462, "status": "Status.RUNNING", "ts": 1787173758.8729825}
+{"event": "bb_write", "tick_id": 462, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 323.0, 'y': 261.5, 'error_x': 3.0, 'error_y': 21.5, 'size': 805.0, 'turn_bias_deg': -7.125016348901798, 'tag_id': 111, 'direction': '', 'depth_mm': 2629.0, 'depth_m': 2.629, 'cam_x_m': 0.05172141364690575, 'cam_y_m': 0.17453871122800063, 'cam_z_m': 2.629, 'lost_count': 0, 'displacement': 8.139410298049853}}", "ts": 1787173758.8730547}
+{"event": "bb_write", "tick_id": 462, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": -7.125016348901798, "ts": 1787173758.8730848}
+{"event": "bb_write", "tick_id": 462, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173758.8731034}
+{"event": "bb_write", "tick_id": 462, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173758.873121}
+{"event": "bb_write", "tick_id": 462, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173758.8731377}
+{"event": "bb_write", "tick_id": 462, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 462}", "ts": 1787173758.873157}
+{"event": "bb_write", "tick_id": 462, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 312, 'last_depth_mm': 2629.0, 'no_depth_ticks': 0}", "ts": 1787173758.8731773}
+{"event": "tree_tick_start", "tick_id": 463, "ts": 1787173758.9705153}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 463, "node": "IsStanding", "level": "L1", "ts": 1787173758.970687}
+{"event": "tick_end", "tick_id": 463, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173758.9707372}
+{"event": "tick_end", "tick_id": 463, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173758.9708025}
+{"event": "tick_end", "tick_id": 463, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173758.970826}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 1}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 463, "node": "TagDetected", "level": "L1", "ts": 1787173758.9708748}
+{"event": "tick_end", "tick_id": 463, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173758.9709089}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 463, "node": "DriveTag", "level": "L2", "ts": 1787173758.9709387}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 313, "depth_mm": 2629.0, "fresh": false, "error_x": null, "no_depth_ticks": 1, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2629 < 2800 mm", "tick_id": 463, "node": "DriveTag", "level": "L2", "ts": 1787173758.9712448}
+{"event": "tick_end", "tick_id": 463, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173758.9712806}
+{"event": "tick_end", "tick_id": 463, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.971302}
+{"event": "tick_end", "tick_id": 463, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173758.971321}
+{"event": "tick_end", "tick_id": 463, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173758.9713387}
+{"event": "tree_tick_end", "tick_id": 463, "status": "Status.RUNNING", "ts": 1787173758.9727998}
+{"event": "bb_write", "tick_id": 463, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 323.0, 'y': 261.5, 'error_x': 3.0, 'error_y': 21.5, 'size': 805.0, 'turn_bias_deg': -7.125016348901798, 'tag_id': 111, 'direction': '', 'depth_mm': 2629.0, 'depth_m': 2.629, 'cam_x_m': 0.05172141364690575, 'cam_y_m': 0.17453871122800063, 'cam_z_m': 2.629, 'lost_count': 1, 'displacement': None}}", "ts": 1787173758.97304}
+{"event": "bb_write", "tick_id": 463, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": NaN, "ts": 1787173758.973134}
+{"event": "bb_write", "tick_id": 463, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173758.9732141}
+{"event": "bb_write", "tick_id": 463, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": -1, "ts": 1787173758.9732788}
+{"event": "bb_write", "tick_id": 463, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173758.9733334}
+{"event": "bb_write", "tick_id": 463, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 463}", "ts": 1787173758.973394}
+{"event": "bb_write", "tick_id": 463, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 313, 'last_depth_mm': 2629.0, 'no_depth_ticks': 1}", "ts": 1787173758.973457}
+{"event": "tree_tick_start", "tick_id": 464, "ts": 1787173759.070855}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 464, "node": "IsStanding", "level": "L1", "ts": 1787173759.0710785}
+{"event": "tick_end", "tick_id": 464, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173759.0711548}
+{"event": "tick_end", "tick_id": 464, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173759.0712445}
+{"event": "tick_end", "tick_id": 464, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173759.0712776}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 464, "node": "TagDetected", "level": "L1", "ts": 1787173759.0713432}
+{"event": "tick_end", "tick_id": 464, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173759.0713835}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 464, "node": "DriveTag", "level": "L2", "ts": 1787173759.071423}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 314, "depth_mm": 2629.0, "fresh": true, "error_x": -28.5, "no_depth_ticks": 0, "yaw": 1, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2629 < 2800 mm", "tick_id": 464, "node": "DriveTag", "level": "L2", "ts": 1787173759.0718913}
+{"event": "tick_end", "tick_id": 464, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173759.0719326}
+{"event": "tick_end", "tick_id": 464, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.0719552}
+{"event": "tick_end", "tick_id": 464, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173759.071974}
+{"event": "tick_end", "tick_id": 464, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.071992}
+{"event": "tree_tick_end", "tick_id": 464, "status": "Status.RUNNING", "ts": 1787173759.0727363}
+{"event": "bb_write", "tick_id": 464, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 291.5, 'y': 288.0, 'error_x': -28.5, 'error_y': 48.0, 'size': 797.5, 'turn_bias_deg': -1.0230301886678357, 'tag_id': 111, 'direction': '', 'depth_mm': 2629.0, 'depth_m': 2.629, 'cam_x_m': -0.17392147022324872, 'cam_y_m': 0.36445625751946725, 'cam_z_m': 2.629, 'lost_count': 0, 'displacement': None}}", "ts": 1787173759.072799}
+{"event": "bb_write", "tick_id": 464, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": -1.0230301886678357, "ts": 1787173759.0729191}
+{"event": "bb_write", "tick_id": 464, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173759.0729487}
+{"event": "bb_write", "tick_id": 464, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173759.0729678}
+{"event": "bb_write", "tick_id": 464, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173759.072984}
+{"event": "bb_write", "tick_id": 464, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 464}", "ts": 1787173759.0730033}
+{"event": "bb_write", "tick_id": 464, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 314, 'last_depth_mm': 2629.0, 'no_depth_ticks': 0}", "ts": 1787173759.0730236}
+{"event": "tree_tick_start", "tick_id": 465, "ts": 1787173759.1704764}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 465, "node": "IsStanding", "level": "L1", "ts": 1787173759.1706498}
+{"event": "tick_end", "tick_id": 465, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173759.170703}
+{"event": "tick_end", "tick_id": 465, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173759.1707697}
+{"event": "tick_end", "tick_id": 465, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173759.1707938}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 465, "node": "TagDetected", "level": "L1", "ts": 1787173759.1708426}
+{"event": "tick_end", "tick_id": 465, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173759.170875}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 465, "node": "DriveTag", "level": "L2", "ts": 1787173759.1709058}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 315, "depth_mm": 2662.0, "fresh": true, "error_x": -31.5, "no_depth_ticks": 0, "yaw": 1, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2662 < 2800 mm", "tick_id": 465, "node": "DriveTag", "level": "L2", "ts": 1787173759.1716936}
+{"event": "tick_end", "tick_id": 465, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173759.1718261}
+{"event": "tick_end", "tick_id": 465, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.1719332}
+{"event": "tick_end", "tick_id": 465, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173759.1719806}
+{"event": "tick_end", "tick_id": 465, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.1720016}
+{"event": "tree_tick_end", "tick_id": 465, "status": "Status.RUNNING", "ts": 1787173759.172911}
+{"event": "bb_write", "tick_id": 465, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 288.5, 'y': 289.0, 'error_x': -31.5, 'error_y': 49.0, 'size': 784.0, 'turn_bias_deg': -0.0, 'tag_id': 111, 'direction': '', 'depth_mm': 2662.0, 'depth_m': 2.662, 'cam_x_m': -0.1978641298002998, 'cam_y_m': 0.3762876806939099, 'cam_z_m': 2.662, 'lost_count': 0, 'displacement': 3.1622776601683795}}", "ts": 1787173759.1730547}
+{"event": "bb_write", "tick_id": 465, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": -0.0, "ts": 1787173759.173085}
+{"event": "bb_write", "tick_id": 465, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173759.1731095}
+{"event": "bb_write", "tick_id": 465, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173759.1731303}
+{"event": "bb_write", "tick_id": 465, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173759.1731558}
+{"event": "bb_write", "tick_id": 465, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 465}", "ts": 1787173759.1731842}
+{"event": "bb_write", "tick_id": 465, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 315, 'last_depth_mm': 2662.0, 'no_depth_ticks': 0}", "ts": 1787173759.1732254}
+{"event": "tree_tick_start", "tick_id": 466, "ts": 1787173759.2712111}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 466, "node": "IsStanding", "level": "L1", "ts": 1787173759.2714674}
+{"event": "tick_end", "tick_id": 466, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173759.2715404}
+{"event": "tick_end", "tick_id": 466, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173759.2716317}
+{"event": "tick_end", "tick_id": 466, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173759.2716594}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 466, "node": "TagDetected", "level": "L1", "ts": 1787173759.271718}
+{"event": "tick_end", "tick_id": 466, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173759.2717526}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 466, "node": "DriveTag", "level": "L2", "ts": 1787173759.271787}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 316, "depth_mm": 2662.0, "fresh": true, "error_x": -31.5, "no_depth_ticks": 0, "yaw": 1, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2662 < 2800 mm", "tick_id": 466, "node": "DriveTag", "level": "L2", "ts": 1787173759.2722244}
+{"event": "tick_end", "tick_id": 466, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173759.2722626}
+{"event": "tick_end", "tick_id": 466, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.272285}
+{"event": "tick_end", "tick_id": 466, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173759.272304}
+{"event": "tick_end", "tick_id": 466, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.2723217}
+{"event": "tree_tick_end", "tick_id": 466, "status": "Status.RUNNING", "ts": 1787173759.273915}
+{"event": "bb_write", "tick_id": 466, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 288.5, 'y': 272.5, 'error_x': -31.5, 'error_y': 32.5, 'size': 785.0, 'turn_bias_deg': 2.0454084888872277, 'tag_id': 111, 'direction': '', 'depth_mm': 2662.0, 'depth_m': 2.662, 'cam_x_m': -0.1978641298002998, 'cam_y_m': 0.2565528165047844, 'cam_z_m': 2.662, 'lost_count': 0, 'displacement': 9.055385138137417}}", "ts": 1787173759.274018}
+{"event": "bb_write", "tick_id": 466, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": 2.0454084888872277, "ts": 1787173759.2740517}
+{"event": "bb_write", "tick_id": 466, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173759.2740712}
+{"event": "bb_write", "tick_id": 466, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173759.2740898}
+{"event": "bb_write", "tick_id": 466, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173759.2741077}
+{"event": "bb_write", "tick_id": 466, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 466}", "ts": 1787173759.2741292}
+{"event": "bb_write", "tick_id": 466, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 316, 'last_depth_mm': 2662.0, 'no_depth_ticks': 0}", "ts": 1787173759.2741578}
+{"event": "tree_tick_start", "tick_id": 467, "ts": 1787173759.3711638}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 467, "node": "IsStanding", "level": "L1", "ts": 1787173759.3714428}
+{"event": "tick_end", "tick_id": 467, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173759.371556}
+{"event": "tick_end", "tick_id": 467, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173759.3716948}
+{"event": "tick_end", "tick_id": 467, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173759.3717835}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 1}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 467, "node": "TagDetected", "level": "L1", "ts": 1787173759.3718605}
+{"event": "tick_end", "tick_id": 467, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173759.371897}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 467, "node": "DriveTag", "level": "L2", "ts": 1787173759.371946}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 317, "depth_mm": 2662.0, "fresh": false, "error_x": null, "no_depth_ticks": 1, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2662 < 2800 mm", "tick_id": 467, "node": "DriveTag", "level": "L2", "ts": 1787173759.3737812}
+{"event": "tick_end", "tick_id": 467, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173759.3738596}
+{"event": "tick_end", "tick_id": 467, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.3738976}
+{"event": "tick_end", "tick_id": 467, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173759.3739343}
+{"event": "tick_end", "tick_id": 467, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.3739796}
+{"event": "tree_tick_end", "tick_id": 467, "status": "Status.RUNNING", "ts": 1787173759.3758159}
+{"event": "bb_write", "tick_id": 467, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 288.5, 'y': 272.5, 'error_x': -31.5, 'error_y': 32.5, 'size': 785.0, 'turn_bias_deg': 2.0454084888872277, 'tag_id': 111, 'direction': '', 'depth_mm': 2662.0, 'depth_m': 2.662, 'cam_x_m': -0.1978641298002998, 'cam_y_m': 0.2565528165047844, 'cam_z_m': 2.662, 'lost_count': 1, 'displacement': None}}", "ts": 1787173759.376009}
+{"event": "bb_write", "tick_id": 467, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": NaN, "ts": 1787173759.3760505}
+{"event": "bb_write", "tick_id": 467, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173759.3760738}
+{"event": "bb_write", "tick_id": 467, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": -1, "ts": 1787173759.3760936}
+{"event": "bb_write", "tick_id": 467, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173759.3761141}
+{"event": "bb_write", "tick_id": 467, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 467}", "ts": 1787173759.3761375}
+{"event": "bb_write", "tick_id": 467, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 317, 'last_depth_mm': 2662.0, 'no_depth_ticks': 1}", "ts": 1787173759.3761618}
+{"event": "tree_tick_start", "tick_id": 468, "ts": 1787173759.4706905}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 468, "node": "IsStanding", "level": "L1", "ts": 1787173759.4708323}
+{"event": "tick_end", "tick_id": 468, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173759.470878}
+{"event": "tick_end", "tick_id": 468, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173759.4709454}
+{"event": "tick_end", "tick_id": 468, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173759.47097}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 468, "node": "TagDetected", "level": "L1", "ts": 1787173759.4710371}
+{"event": "tick_end", "tick_id": 468, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173759.471084}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 468, "node": "DriveTag", "level": "L2", "ts": 1787173759.4711165}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 318, "depth_mm": 2731.0, "fresh": true, "error_x": -8.5, "no_depth_ticks": 0, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2731 < 2800 mm", "tick_id": 468, "node": "DriveTag", "level": "L2", "ts": 1787173759.4719136}
+{"event": "tick_end", "tick_id": 468, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173759.4719756}
+{"event": "tick_end", "tick_id": 468, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.4720058}
+{"event": "tick_end", "tick_id": 468, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173759.472027}
+{"event": "tick_end", "tick_id": 468, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.472046}
+{"event": "tree_tick_end", "tick_id": 468, "status": "Status.RUNNING", "ts": 1787173759.4726675}
+{"event": "bb_write", "tick_id": 468, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 311.5, 'y': 274.0, 'error_x': -8.5, 'error_y': 34.0, 'size': 786.0, 'turn_bias_deg': -4.085616779974877, 'tag_id': 111, 'direction': '', 'depth_mm': 2731.0, 'depth_m': 2.731, 'cam_x_m': -0.03184554500380335, 'cam_y_m': 0.2743698884885161, 'cam_z_m': 2.731, 'lost_count': 0, 'displacement': None}}", "ts": 1787173759.472746}
+{"event": "bb_write", "tick_id": 468, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": -4.085616779974877, "ts": 1787173759.4727736}
+{"event": "bb_write", "tick_id": 468, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173759.4727921}
+{"event": "bb_write", "tick_id": 468, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173759.4728086}
+{"event": "bb_write", "tick_id": 468, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173759.4728253}
+{"event": "bb_write", "tick_id": 468, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 468}", "ts": 1787173759.4728446}
+{"event": "bb_write", "tick_id": 468, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 318, 'last_depth_mm': 2731.0, 'no_depth_ticks': 0}", "ts": 1787173759.4728653}
+{"event": "tree_tick_start", "tick_id": 469, "ts": 1787173759.5713925}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 469, "node": "IsStanding", "level": "L1", "ts": 1787173759.5717413}
+{"event": "tick_end", "tick_id": 469, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173759.5718322}
+{"event": "tick_end", "tick_id": 469, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173759.5719132}
+{"event": "tick_end", "tick_id": 469, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173759.5719388}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 469, "node": "TagDetected", "level": "L1", "ts": 1787173759.5719988}
+{"event": "tick_end", "tick_id": 469, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173759.5720346}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 469, "node": "DriveTag", "level": "L2", "ts": 1787173759.5720654}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 319, "depth_mm": 2679.0, "fresh": true, "error_x": -16.0, "no_depth_ticks": 0, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2679 < 2800 mm", "tick_id": 469, "node": "DriveTag", "level": "L2", "ts": 1787173759.572579}
+{"event": "tick_end", "tick_id": 469, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173759.5726693}
+{"event": "tick_end", "tick_id": 469, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.572726}
+{"event": "tick_end", "tick_id": 469, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173759.5727684}
+{"event": "tick_end", "tick_id": 469, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.5728035}
+{"event": "tree_tick_end", "tick_id": 469, "status": "Status.RUNNING", "ts": 1787173759.5738761}
+{"event": "bb_write", "tick_id": 469, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 304.0, 'y': 264.0, 'error_x': -16.0, 'error_y': 24.0, 'size': 803.0, 'turn_bias_deg': -5.10216525235819, 'tag_id': 111, 'direction': '', 'depth_mm': 2679.0, 'depth_m': 2.679, 'cam_x_m': -0.08598544822200277, 'cam_y_m': 0.19611570167080045, 'cam_z_m': 2.679, 'lost_count': 0, 'displacement': 12.5}}", "ts": 1787173759.5739799}
+{"event": "bb_write", "tick_id": 469, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": -5.10216525235819, "ts": 1787173759.5740292}
+{"event": "bb_write", "tick_id": 469, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173759.5740666}
+{"event": "bb_write", "tick_id": 469, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173759.5741127}
+{"event": "bb_write", "tick_id": 469, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173759.5741453}
+{"event": "bb_write", "tick_id": 469, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 469}", "ts": 1787173759.5741868}
+{"event": "bb_write", "tick_id": 469, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 319, 'last_depth_mm': 2679.0, 'no_depth_ticks': 0}", "ts": 1787173759.5742216}
+{"event": "tree_tick_start", "tick_id": 470, "ts": 1787173759.6720476}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 470, "node": "IsStanding", "level": "L1", "ts": 1787173759.6723425}
+{"event": "tick_end", "tick_id": 470, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173759.672432}
+{"event": "tick_end", "tick_id": 470, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173759.6725278}
+{"event": "tick_end", "tick_id": 470, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173759.672568}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 470, "node": "TagDetected", "level": "L1", "ts": 1787173759.6726797}
+{"event": "tick_end", "tick_id": 470, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173759.6727428}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 470, "node": "DriveTag", "level": "L2", "ts": 1787173759.6727865}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 320, "depth_mm": 2679.0, "fresh": true, "error_x": -8.0, "no_depth_ticks": 0, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2679 < 2800 mm", "tick_id": 470, "node": "DriveTag", "level": "L2", "ts": 1787173759.673406}
+{"event": "tick_end", "tick_id": 470, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173759.673481}
+{"event": "tick_end", "tick_id": 470, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.6735106}
+{"event": "tick_end", "tick_id": 470, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173759.6735358}
+{"event": "tick_end", "tick_id": 470, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.673574}
+{"event": "tree_tick_end", "tick_id": 470, "status": "Status.RUNNING", "ts": 1787173759.674377}
+{"event": "bb_write", "tick_id": 470, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 312.0, 'y': 247.0, 'error_x': -8.0, 'error_y': 7.0, 'size': 757.0, 'turn_bias_deg': -3.122130462115708, 'tag_id': 111, 'direction': '', 'depth_mm': 2679.0, 'depth_m': 2.679, 'cam_x_m': -0.027589434442786213, 'cam_y_m': 0.07196468922253098, 'cam_z_m': 2.679, 'lost_count': 0, 'displacement': 7.211102550927979}}", "ts": 1787173759.674486}
+{"event": "bb_write", "tick_id": 470, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": -3.122130462115708, "ts": 1787173759.6745157}
+{"event": "bb_write", "tick_id": 470, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173759.6745353}
+{"event": "bb_write", "tick_id": 470, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173759.6745534}
+{"event": "bb_write", "tick_id": 470, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173759.6745708}
+{"event": "bb_write", "tick_id": 470, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 470}", "ts": 1787173759.674592}
+{"event": "bb_write", "tick_id": 470, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 320, 'last_depth_mm': 2679.0, 'no_depth_ticks': 0}", "ts": 1787173759.674659}
+{"event": "tree_tick_start", "tick_id": 471, "ts": 1787173759.771336}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 471, "node": "IsStanding", "level": "L1", "ts": 1787173759.7716374}
+{"event": "tick_end", "tick_id": 471, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173759.771827}
+{"event": "tick_end", "tick_id": 471, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173759.7721176}
+{"event": "tick_end", "tick_id": 471, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173759.7721844}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 1}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 471, "node": "TagDetected", "level": "L1", "ts": 1787173759.7723613}
+{"event": "tick_end", "tick_id": 471, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173759.7725046}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 471, "node": "DriveTag", "level": "L2", "ts": 1787173759.7726045}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 321, "depth_mm": 2679.0, "fresh": false, "error_x": null, "no_depth_ticks": 1, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2679 < 2800 mm", "tick_id": 471, "node": "DriveTag", "level": "L2", "ts": 1787173759.773628}
+{"event": "tick_end", "tick_id": 471, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173759.773768}
+{"event": "tick_end", "tick_id": 471, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.7738001}
+{"event": "tick_end", "tick_id": 471, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173759.7738214}
+{"event": "tick_end", "tick_id": 471, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.774104}
+{"event": "tree_tick_end", "tick_id": 471, "status": "Status.RUNNING", "ts": 1787173759.778948}
+{"event": "bb_write", "tick_id": 471, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 312.0, 'y': 247.0, 'error_x': -8.0, 'error_y': 7.0, 'size': 757.0, 'turn_bias_deg': -3.122130462115708, 'tag_id': 111, 'direction': '', 'depth_mm': 2679.0, 'depth_m': 2.679, 'cam_x_m': -0.027589434442786213, 'cam_y_m': 0.07196468922253098, 'cam_z_m': 2.679, 'lost_count': 1, 'displacement': None}}", "ts": 1787173759.7794144}
+{"event": "bb_write", "tick_id": 471, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": NaN, "ts": 1787173759.7796392}
+{"event": "bb_write", "tick_id": 471, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173759.7797842}
+{"event": "bb_write", "tick_id": 471, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": -1, "ts": 1787173759.7798605}
+{"event": "bb_write", "tick_id": 471, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173759.7799034}
+{"event": "bb_write", "tick_id": 471, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 471}", "ts": 1787173759.7799442}
+{"event": "bb_write", "tick_id": 471, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 321, 'last_depth_mm': 2679.0, 'no_depth_ticks': 1}", "ts": 1787173759.7799768}
+{"event": "tree_tick_start", "tick_id": 472, "ts": 1787173759.8708208}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 472, "node": "IsStanding", "level": "L1", "ts": 1787173759.8711147}
+{"event": "tick_end", "tick_id": 472, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173759.8712347}
+{"event": "tick_end", "tick_id": 472, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173759.8713777}
+{"event": "tick_end", "tick_id": 472, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173759.8714173}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 3}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 472, "node": "TagDetected", "level": "L1", "ts": 1787173759.8715138}
+{"event": "tick_end", "tick_id": 472, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173759.871577}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 472, "node": "DriveTag", "level": "L2", "ts": 1787173759.8716285}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 322, "depth_mm": 2679.0, "fresh": false, "error_x": null, "no_depth_ticks": 2, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2679 < 2800 mm", "tick_id": 472, "node": "DriveTag", "level": "L2", "ts": 1787173759.8721402}
+{"event": "tick_end", "tick_id": 472, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173759.8722103}
+{"event": "tick_end", "tick_id": 472, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.872245}
+{"event": "tick_end", "tick_id": 472, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173759.8722725}
+{"event": "tick_end", "tick_id": 472, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.872296}
+{"event": "tree_tick_end", "tick_id": 472, "status": "Status.RUNNING", "ts": 1787173759.8737862}
+{"event": "bb_write", "tick_id": 472, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 312.0, 'y': 247.0, 'error_x': -8.0, 'error_y': 7.0, 'size': 757.0, 'turn_bias_deg': -3.122130462115708, 'tag_id': 111, 'direction': '', 'depth_mm': 2679.0, 'depth_m': 2.679, 'cam_x_m': -0.027589434442786213, 'cam_y_m': 0.07196468922253098, 'cam_z_m': 2.679, 'lost_count': 3, 'displacement': None}}", "ts": 1787173759.87387}
+{"event": "bb_write", "tick_id": 472, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": NaN, "ts": 1787173759.8739011}
+{"event": "bb_write", "tick_id": 472, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173759.8739219}
+{"event": "bb_write", "tick_id": 472, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": -1, "ts": 1787173759.8739402}
+{"event": "bb_write", "tick_id": 472, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173759.8739574}
+{"event": "bb_write", "tick_id": 472, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 472}", "ts": 1787173759.8739784}
+{"event": "bb_write", "tick_id": 472, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 322, 'last_depth_mm': 2679.0, 'no_depth_ticks': 2}", "ts": 1787173759.8740048}
+{"event": "tree_tick_start", "tick_id": 473, "ts": 1787173759.971185}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 473, "node": "IsStanding", "level": "L1", "ts": 1787173759.97157}
+{"event": "tick_end", "tick_id": 473, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173759.9719293}
+{"event": "tick_end", "tick_id": 473, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173759.9722846}
+{"event": "tick_end", "tick_id": 473, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173759.9723897}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 4}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 473, "node": "TagDetected", "level": "L1", "ts": 1787173759.9725447}
+{"event": "tick_end", "tick_id": 473, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173759.9726696}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 473, "node": "DriveTag", "level": "L2", "ts": 1787173759.9727218}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 323, "depth_mm": 2679.0, "fresh": false, "error_x": null, "no_depth_ticks": 3, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2679 < 2800 mm", "tick_id": 473, "node": "DriveTag", "level": "L2", "ts": 1787173759.9732268}
+{"event": "tick_end", "tick_id": 473, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173759.9733012}
+{"event": "tick_end", "tick_id": 473, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.973342}
+{"event": "tick_end", "tick_id": 473, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173759.9734056}
+{"event": "tick_end", "tick_id": 473, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173759.9734519}
+{"event": "tree_tick_end", "tick_id": 473, "status": "Status.RUNNING", "ts": 1787173759.974467}
+{"event": "bb_write", "tick_id": 473, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 312.0, 'y': 247.0, 'error_x': -8.0, 'error_y': 7.0, 'size': 757.0, 'turn_bias_deg': -3.122130462115708, 'tag_id': 111, 'direction': '', 'depth_mm': 2679.0, 'depth_m': 2.679, 'cam_x_m': -0.027589434442786213, 'cam_y_m': 0.07196468922253098, 'cam_z_m': 2.679, 'lost_count': 4, 'displacement': None}}", "ts": 1787173759.9746234}
+{"event": "bb_write", "tick_id": 473, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": NaN, "ts": 1787173759.9746716}
+{"event": "bb_write", "tick_id": 473, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173759.9746993}
+{"event": "bb_write", "tick_id": 473, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": -1, "ts": 1787173759.9747362}
+{"event": "bb_write", "tick_id": 473, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173759.9747655}
+{"event": "bb_write", "tick_id": 473, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 473}", "ts": 1787173759.974826}
+{"event": "bb_write", "tick_id": 473, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 323, 'last_depth_mm': 2679.0, 'no_depth_ticks': 3}", "ts": 1787173759.9749799}
+{"event": "tree_tick_start", "tick_id": 474, "ts": 1787173760.0709314}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 474, "node": "IsStanding", "level": "L1", "ts": 1787173760.071192}
+{"event": "tick_end", "tick_id": 474, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173760.0712733}
+{"event": "tick_end", "tick_id": 474, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173760.0713935}
+{"event": "tick_end", "tick_id": 474, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173760.0714586}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 474, "node": "TagDetected", "level": "L1", "ts": 1787173760.0715597}
+{"event": "tick_end", "tick_id": 474, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173760.071619}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 474, "node": "DriveTag", "level": "L2", "ts": 1787173760.0716622}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 324, "depth_mm": 2646.0, "fresh": true, "error_x": -46.5, "no_depth_ticks": 0, "yaw": 2, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2646 < 2800 mm", "tick_id": 474, "node": "DriveTag", "level": "L2", "ts": 1787173760.0726573}
+{"event": "tick_end", "tick_id": 474, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173760.0727432}
+{"event": "tick_end", "tick_id": 474, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173760.072777}
+{"event": "tick_end", "tick_id": 474, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173760.0728073}
+{"event": "tick_end", "tick_id": 474, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173760.0728285}
+{"event": "tree_tick_end", "tick_id": 474, "status": "Status.RUNNING", "ts": 1787173760.073909}
+{"event": "bb_write", "tick_id": 474, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 273.5, 'y': 232.5, 'error_x': -46.5, 'error_y': -7.5, 'size': 747.5, 'turn_bias_deg': 4.159642293712642, 'tag_id': 111, 'direction': '', 'depth_mm': 2646.0, 'depth_m': 2.646, 'cam_x_m': -0.3048186575208785, 'cam_y_m': -0.03351088518531644, 'cam_z_m': 2.646, 'lost_count': 0, 'displacement': None}}", "ts": 1787173760.0740128}
+{"event": "bb_write", "tick_id": 474, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": 4.159642293712642, "ts": 1787173760.074043}
+{"event": "bb_write", "tick_id": 474, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173760.0740626}
+{"event": "bb_write", "tick_id": 474, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173760.07408}
+{"event": "bb_write", "tick_id": 474, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173760.0740976}
+{"event": "bb_write", "tick_id": 474, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 474}", "ts": 1787173760.0741174}
+{"event": "bb_write", "tick_id": 474, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 324, 'last_depth_mm': 2646.0, 'no_depth_ticks': 0}", "ts": 1787173760.0741386}
+{"event": "tree_tick_start", "tick_id": 475, "ts": 1787173760.1711233}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 475, "node": "IsStanding", "level": "L1", "ts": 1787173760.1716623}
+{"event": "tick_end", "tick_id": 475, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173760.1719816}
+{"event": "tick_end", "tick_id": 475, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173760.1721697}
+{"event": "tick_end", "tick_id": 475, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173760.1722345}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 1}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 475, "node": "TagDetected", "level": "L1", "ts": 1787173760.1723561}
+{"event": "tick_end", "tick_id": 475, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173760.1725197}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 475, "node": "DriveTag", "level": "L2", "ts": 1787173760.1726625}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 325, "depth_mm": 2646.0, "fresh": false, "error_x": null, "no_depth_ticks": 1, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2646 < 2800 mm", "tick_id": 475, "node": "DriveTag", "level": "L2", "ts": 1787173760.1737356}
+{"event": "tick_end", "tick_id": 475, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173760.1739779}
+{"event": "tick_end", "tick_id": 475, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173760.1740673}
+{"event": "tick_end", "tick_id": 475, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173760.1741078}
+{"event": "tick_end", "tick_id": 475, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173760.1741352}
+{"event": "tree_tick_end", "tick_id": 475, "status": "Status.RUNNING", "ts": 1787173760.175463}
+{"event": "bb_write", "tick_id": 475, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 273.5, 'y': 232.5, 'error_x': -46.5, 'error_y': -7.5, 'size': 747.5, 'turn_bias_deg': 4.159642293712642, 'tag_id': 111, 'direction': '', 'depth_mm': 2646.0, 'depth_m': 2.646, 'cam_x_m': -0.3048186575208785, 'cam_y_m': -0.03351088518531644, 'cam_z_m': 2.646, 'lost_count': 1, 'displacement': None}}", "ts": 1787173760.1756005}
+{"event": "bb_write", "tick_id": 475, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": NaN, "ts": 1787173760.1756375}
+{"event": "bb_write", "tick_id": 475, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173760.1756773}
+{"event": "bb_write", "tick_id": 475, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": -1, "ts": 1787173760.1757007}
+{"event": "bb_write", "tick_id": 475, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173760.1757207}
+{"event": "bb_write", "tick_id": 475, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 475}", "ts": 1787173760.1757445}
+{"event": "bb_write", "tick_id": 475, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 325, 'last_depth_mm': 2646.0, 'no_depth_ticks': 1}", "ts": 1787173760.1757686}
+{"event": "tree_tick_start", "tick_id": 476, "ts": 1787173760.27085}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 476, "node": "IsStanding", "level": "L1", "ts": 1787173760.2710867}
+{"event": "tick_end", "tick_id": 476, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173760.271153}
+{"event": "tick_end", "tick_id": 476, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173760.2712533}
+{"event": "tick_end", "tick_id": 476, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173760.271293}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 476, "node": "TagDetected", "level": "L1", "ts": 1787173760.2713604}
+{"event": "tick_end", "tick_id": 476, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173760.271403}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 476, "node": "DriveTag", "level": "L2", "ts": 1787173760.2714415}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 326, "depth_mm": 2679.0, "fresh": true, "error_x": -34.0, "no_depth_ticks": 0, "yaw": 1, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2679 < 2800 mm", "tick_id": 476, "node": "DriveTag", "level": "L2", "ts": 1787173760.272425}
+{"event": "tick_end", "tick_id": 476, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173760.2725036}
+{"event": "tick_end", "tick_id": 476, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173760.2725382}
+{"event": "tick_end", "tick_id": 476, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173760.2725713}
+{"event": "tick_end", "tick_id": 476, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173760.2725966}
+{"event": "tree_tick_end", "tick_id": 476, "status": "Status.RUNNING", "ts": 1787173760.2731402}
+{"event": "bb_write", "tick_id": 476, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 286.0, 'y': 261.0, 'error_x': -34.0, 'error_y': 21.0, 'size': 757.0, 'turn_bias_deg': -3.122130462115708, 'tag_id': 111, 'direction': '', 'depth_mm': 2679.0, 'depth_m': 2.679, 'cam_x_m': -0.21737647922524, 'cam_y_m': 0.174206699474047, 'cam_z_m': 2.679, 'lost_count': 0, 'displacement': None}}", "ts": 1787173760.273205}
+{"event": "bb_write", "tick_id": 476, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": -3.122130462115708, "ts": 1787173760.2732306}
+{"event": "bb_write", "tick_id": 476, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173760.2732487}
+{"event": "bb_write", "tick_id": 476, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173760.2732658}
+{"event": "bb_write", "tick_id": 476, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173760.2732823}
+{"event": "bb_write", "tick_id": 476, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 476}", "ts": 1787173760.2733016}
+{"event": "bb_write", "tick_id": 476, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 326, 'last_depth_mm': 2679.0, 'no_depth_ticks': 0}", "ts": 1787173760.2733219}
+{"event": "tree_tick_start", "tick_id": 477, "ts": 1787173760.3712907}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 477, "node": "IsStanding", "level": "L1", "ts": 1787173760.3714488}
+{"event": "tick_end", "tick_id": 477, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173760.3714993}
+{"event": "tick_end", "tick_id": 477, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173760.3715649}
+{"event": "tick_end", "tick_id": 477, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173760.3715885}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 477, "node": "TagDetected", "level": "L1", "ts": 1787173760.3716373}
+{"event": "tick_end", "tick_id": 477, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173760.3716693}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 477, "node": "DriveTag", "level": "L2", "ts": 1787173760.3717732}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 327, "depth_mm": 2679.0, "fresh": true, "error_x": -44.0, "no_depth_ticks": 0, "yaw": 2, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2679 < 2800 mm", "tick_id": 477, "node": "DriveTag", "level": "L2", "ts": 1787173760.3723955}
+{"event": "tick_end", "tick_id": 477, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173760.372468}
+{"event": "tick_end", "tick_id": 477, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173760.372502}
+{"event": "tick_end", "tick_id": 477, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173760.372532}
+{"event": "tick_end", "tick_id": 477, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173760.3725543}
+{"event": "tree_tick_end", "tick_id": 477, "status": "Status.RUNNING", "ts": 1787173760.3744657}
+{"event": "bb_write", "tick_id": 477, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 276.0, 'y': 261.0, 'error_x': -44.0, 'error_y': 21.0, 'size': 757.0, 'turn_bias_deg': -3.122130462115708, 'tag_id': 111, 'direction': '', 'depth_mm': 2679.0, 'depth_m': 2.679, 'cam_x_m': -0.29037149644926075, 'cam_y_m': 0.174206699474047, 'cam_z_m': 2.679, 'lost_count': 0, 'displacement': 10.0}}", "ts": 1787173760.3748474}
+{"event": "bb_write", "tick_id": 477, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": -3.122130462115708, "ts": 1787173760.375234}
+{"event": "bb_write", "tick_id": 477, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173760.3754165}
+{"event": "bb_write", "tick_id": 477, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173760.3754687}
+{"event": "bb_write", "tick_id": 477, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173760.3754883}
+{"event": "bb_write", "tick_id": 477, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 477}", "ts": 1787173760.3755128}
+{"event": "bb_write", "tick_id": 477, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 327, 'last_depth_mm': 2679.0, 'no_depth_ticks': 0}", "ts": 1787173760.3755357}
+{"event": "tree_tick_start", "tick_id": 478, "ts": 1787173760.470925}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 478, "node": "IsStanding", "level": "L1", "ts": 1787173760.471149}
+{"event": "tick_end", "tick_id": 478, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173760.471215}
+{"event": "tick_end", "tick_id": 478, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173760.471303}
+{"event": "tick_end", "tick_id": 478, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173760.471331}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 478, "node": "TagDetected", "level": "L1", "ts": 1787173760.4713907}
+{"event": "tick_end", "tick_id": 478, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173760.4714286}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 478, "node": "DriveTag", "level": "L2", "ts": 1787173760.4714713}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 328, "depth_mm": 2679.0, "fresh": true, "error_x": -42.5, "no_depth_ticks": 0, "yaw": 2, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2679 < 2800 mm", "tick_id": 478, "node": "DriveTag", "level": "L2", "ts": 1787173760.4720128}
+{"event": "tick_end", "tick_id": 478, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173760.4720578}
+{"event": "tick_end", "tick_id": 478, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173760.472081}
+{"event": "tick_end", "tick_id": 478, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173760.4721005}
+{"event": "tick_end", "tick_id": 478, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173760.4721186}
+{"event": "tree_tick_end", "tick_id": 478, "status": "Status.RUNNING", "ts": 1787173760.4726567}
+{"event": "bb_write", "tick_id": 478, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 277.5, 'y': 256.0, 'error_x': -42.5, 'error_y': 16.0, 'size': 729.0, 'turn_bias_deg': -2.1210963966614536, 'tag_id': 111, 'direction': '', 'depth_mm': 2679.0, 'depth_m': 2.679, 'cam_x_m': -0.2794222438656576, 'cam_y_m': 0.13769169581279128, 'cam_z_m': 2.679, 'lost_count': 0, 'displacement': 5.0}}", "ts": 1787173760.4727223}
+{"event": "bb_write", "tick_id": 478, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": -2.1210963966614536, "ts": 1787173760.472748}
+{"event": "bb_write", "tick_id": 478, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173760.4727664}
+{"event": "bb_write", "tick_id": 478, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173760.4727836}
+{"event": "bb_write", "tick_id": 478, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173760.4728}
+{"event": "bb_write", "tick_id": 478, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 478}", "ts": 1787173760.4728196}
+{"event": "bb_write", "tick_id": 478, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 328, 'last_depth_mm': 2679.0, 'no_depth_ticks': 0}", "ts": 1787173760.4728405}
+{"event": "tree_tick_start", "tick_id": 479, "ts": 1787173760.571112}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 479, "node": "IsStanding", "level": "L1", "ts": 1787173760.571281}
+{"event": "tick_end", "tick_id": 479, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173760.5713365}
+{"event": "tick_end", "tick_id": 479, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173760.5714064}
+{"event": "tick_end", "tick_id": 479, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173760.5714312}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 1}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 479, "node": "TagDetected", "level": "L1", "ts": 1787173760.5714839}
+{"event": "tick_end", "tick_id": 479, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173760.571519}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 479, "node": "DriveTag", "level": "L2", "ts": 1787173760.5715497}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 329, "depth_mm": 2679.0, "fresh": false, "error_x": null, "no_depth_ticks": 1, "yaw": 0, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2679 < 2800 mm", "tick_id": 479, "node": "DriveTag", "level": "L2", "ts": 1787173760.57209}
+{"event": "tick_end", "tick_id": 479, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173760.5722482}
+{"event": "tick_end", "tick_id": 479, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173760.5723612}
+{"event": "tick_end", "tick_id": 479, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173760.5724492}
+{"event": "tick_end", "tick_id": 479, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173760.5725448}
+{"event": "tree_tick_end", "tick_id": 479, "status": "Status.RUNNING", "ts": 1787173760.575568}
+{"event": "bb_write", "tick_id": 479, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 277.5, 'y': 256.0, 'error_x': -42.5, 'error_y': 16.0, 'size': 729.0, 'turn_bias_deg': -2.1210963966614536, 'tag_id': 111, 'direction': '', 'depth_mm': 2679.0, 'depth_m': 2.679, 'cam_x_m': -0.2794222438656576, 'cam_y_m': 0.13769169581279128, 'cam_z_m': 2.679, 'lost_count': 1, 'displacement': None}}", "ts": 1787173760.575694}
+{"event": "bb_write", "tick_id": 479, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": NaN, "ts": 1787173760.5757248}
+{"event": "bb_write", "tick_id": 479, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173760.5757442}
+{"event": "bb_write", "tick_id": 479, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": -1, "ts": 1787173760.5757608}
+{"event": "bb_write", "tick_id": 479, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173760.5757775}
+{"event": "bb_write", "tick_id": 479, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 479}", "ts": 1787173760.5757973}
+{"event": "bb_write", "tick_id": 479, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 329, 'last_depth_mm': 2679.0, 'no_depth_ticks': 1}", "ts": 1787173760.575819}
+{"event": "tree_tick_start", "tick_id": 480, "ts": 1787173760.6709156}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 480, "node": "IsStanding", "level": "L1", "ts": 1787173760.6711447}
+{"event": "tick_end", "tick_id": 480, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173760.6712148}
+{"event": "tick_end", "tick_id": 480, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173760.6713195}
+{"event": "tick_end", "tick_id": 480, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173760.6713521}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 480, "node": "TagDetected", "level": "L1", "ts": 1787173760.671424}
+{"event": "tick_end", "tick_id": 480, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173760.671465}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 480, "node": "DriveTag", "level": "L2", "ts": 1787173760.6715057}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 330, "depth_mm": 2731.0, "fresh": true, "error_x": -58.0, "no_depth_ticks": 0, "yaw": 2, "next_phase": "retreat"}, "status": "RUNNING", "reason": "retreating: depth 2731 < 2800 mm", "tick_id": 480, "node": "DriveTag", "level": "L2", "ts": 1787173760.6719599}
+{"event": "tick_end", "tick_id": 480, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.RUNNING", "ts": 1787173760.6720037}
+{"event": "tick_end", "tick_id": 480, "node": "Sprint", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173760.672026}
+{"event": "tick_end", "tick_id": 480, "node": "TaskControl", "type": "Selector", "status": "Status.RUNNING", "ts": 1787173760.6720452}
+{"event": "tick_end", "tick_id": 480, "node": "SprintBT", "type": "Sequence", "status": "Status.RUNNING", "ts": 1787173760.6720629}
+{"event": "tree_tick_end", "tick_id": 480, "status": "Status.RUNNING", "ts": 1787173760.672597}
+{"event": "bb_write", "tick_id": 480, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 262.0, 'y': 281.5, 'error_x': -58.0, 'error_y': 41.5, 'size': 720.5, 'turn_bias_deg': 4.316027519865624, 'tag_id': 111, 'direction': '', 'depth_mm': 2731.0, 'depth_m': 2.731, 'cam_x_m': -0.40018428729274047, 'cam_y_m': 0.330205540783527, 'cam_z_m': 2.731, 'lost_count': 0, 'displacement': None}}", "ts": 1787173760.672662}
+{"event": "bb_write", "tick_id": 480, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": 4.316027519865624, "ts": 1787173760.6726866}
+{"event": "bb_write", "tick_id": 480, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173760.6727047}
+{"event": "bb_write", "tick_id": 480, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173760.6727211}
+{"event": "bb_write", "tick_id": 480, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173760.6727376}
+{"event": "bb_write", "tick_id": 480, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 480}", "ts": 1787173760.6727564}
+{"event": "bb_write", "tick_id": 480, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'retreat', 'ticks_in_phase': 330, 'last_depth_mm': 2731.0, 'no_depth_ticks': 0}", "ts": 1787173760.672777}
+{"event": "tree_tick_start", "tick_id": 481, "ts": 1787173760.7710598}
+{"event": "decision", "inputs": {"robot_state": "stand", "expected_stand_label": "stand"}, "status": "SUCCESS", "reason": "robot_state == 'stand'", "tick_id": 481, "node": "IsStanding", "level": "L1", "ts": 1787173760.7713492}
+{"event": "tick_end", "tick_id": 481, "node": "IsStanding", "type": "L1_Balance_IsStanding", "status": "Status.SUCCESS", "ts": 1787173760.7714095}
+{"event": "tick_end", "tick_id": 481, "node": "StandConfirmed", "type": "LatchedDwellDecorator", "status": "Status.SUCCESS", "ts": 1787173760.7716088}
+{"event": "tick_end", "tick_id": 481, "node": "SafetyGate", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173760.7716436}
+{"event": "decision", "inputs": {"target_id": "apriltag", "in_dict": true, "lost_count": 0}, "status": "SUCCESS", "reason": "target 'apriltag' detected (lost_count<=10)", "tick_id": 481, "node": "TagDetected", "level": "L1", "ts": 1787173760.7716994}
+{"event": "tick_end", "tick_id": 481, "node": "TagDetected", "type": "L1_Vision_IsObjectDetected", "status": "Status.SUCCESS", "ts": 1787173760.771735}
+{"event": "action_intent", "action": "sprint_drive_tag", "inputs": {"target_id": "apriltag", "stop_distance_mm": 500.0, "retreat_distance_mm": 2800.0, "approach_x_speed": 0.02, "retreat_x_speed": 0.015, "state_key": "sprint_drive"}, "tick_id": 481, "node": "DriveTag", "level": "L2", "ts": 1787173760.7717657}
+{"event": "decision", "inputs": {"phase": "retreat", "ticks_in_phase": 331, "depth_mm": 2918.0, "fresh": true, "error_x": -54.0, "no_depth_ticks": 0, "yaw": 2, "next_phase": "done"}, "status": "SUCCESS", "reason": "retreat complete: depth 2918 >= 2800 mm", "tick_id": 481, "node": "DriveTag", "level": "L2", "ts": 1787173761.921927}
+{"event": "tick_end", "tick_id": 481, "node": "DriveTag", "type": "L2_Sprint_DriveTag", "status": "Status.SUCCESS", "ts": 1787173761.922078}
+{"event": "tick_end", "tick_id": 481, "node": "Sprint", "type": "Sequence", "status": "Status.SUCCESS", "ts": 1787173761.9221332}
+{"event": "tick_end", "tick_id": 481, "node": "TaskControl", "type": "Selector", "status": "Status.SUCCESS", "ts": 1787173761.9221625}
+{"event": "tick_end", "tick_id": 481, "node": "SprintBT", "type": "Sequence", "status": "Status.SUCCESS", "ts": 1787173761.9221957}
+{"event": "tree_tick_end", "tick_id": 481, "status": "Status.SUCCESS", "ts": 1787173761.9253535}
+{"event": "bb_write", "tick_id": 481, "writer": "AprilTagAdapter", "key": "/latched/tracked_objects", "value": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 266.0, 'y': 271.5, 'error_x': -54.0, 'error_y': 31.5, 'size': 735.0, 'turn_bias_deg': 4.23639479905884, 'tag_id': 111, 'direction': '', 'depth_mm': 2918.0, 'depth_m': 2.918, 'cam_x_m': -0.3957833097792592, 'cam_y_m': 0.27327054441982535, 'cam_z_m': 2.918, 'lost_count': 0, 'displacement': 10.77032961426901}}", "ts": 1787173761.9255128}
+{"event": "bb_write", "tick_id": 481, "writer": "AprilTagAdapter", "key": "/latched/apriltag_turn_bias", "value": 4.23639479905884, "ts": 1787173761.9255636}
+{"event": "bb_write", "tick_id": 481, "writer": "AprilTagAdapter", "key": "/latched/apriltag_direction", "value": "", "ts": 1787173761.9255924}
+{"event": "bb_write", "tick_id": 481, "writer": "AprilTagAdapter", "key": "/latched/apriltag_tag_id", "value": 111, "ts": 1787173761.9256127}
+{"event": "bb_write", "tick_id": 481, "writer": "ImuBalanceStateAdapter", "key": "/latched/robot_state", "value": "stand", "ts": 1787173761.925634}
+{"event": "bb_write", "tick_id": 481, "writer": "StandConfirmed", "key": "/node_state/sprint_stand_confirmed", "value": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 481}", "ts": 1787173761.925657}
+{"event": "bb_write", "tick_id": 481, "writer": "DriveTag_state", "key": "/node_state/sprint_drive", "value": "{'phase': 'done', 'ticks_in_phase': 0, 'last_depth_mm': 2918.0, 'no_depth_ticks': 0}", "ts": 1787173761.9256825}

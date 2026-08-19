@@ -1,0 +1,76 @@
+{
+  "closed_utc": "20260819T211627Z",
+  "duration_s_approx": 1113.0,
+  "dwells": {
+    "sprint_drive": {
+      "latch_count": 0,
+      "max_stable_ticks": 0,
+      "reset_count": 0,
+      "ticks_to_first_latch": null
+    },
+    "sprint_stand_confirmed": {
+      "latch_count": 1,
+      "max_stable_ticks": 5,
+      "reset_count": 0,
+      "ticks_to_first_latch": 481
+    }
+  },
+  "events_total": 10069,
+  "failure_mode": "",
+  "first_success_tick": 481,
+  "interventions": 0,
+  "log_present": true,
+  "node_status_counts": {
+    "DriveTag": {
+      "RUNNING": 476,
+      "SUCCESS": 1
+    },
+    "IsStanding": {
+      "SUCCESS": 481
+    },
+    "SafetyGate": {
+      "RUNNING": 4,
+      "SUCCESS": 477
+    },
+    "Sprint": {
+      "RUNNING": 476,
+      "SUCCESS": 1
+    },
+    "SprintBT": {
+      "RUNNING": 480,
+      "SUCCESS": 1
+    },
+    "StandConfirmed": {
+      "RUNNING": 4,
+      "SUCCESS": 477
+    },
+    "TagDetected": {
+      "SUCCESS": 477
+    },
+    "TaskControl": {
+      "RUNNING": 476,
+      "SUCCESS": 1
+    }
+  },
+  "node_ticks": {
+    "DriveTag": 477,
+    "IsStanding": 481,
+    "SafetyGate": 481,
+    "Sprint": 477,
+    "SprintBT": 481,
+    "StandConfirmed": 481,
+    "TagDetected": 477,
+    "TaskControl": 477
+  },
+  "note": "AprilTag 111 (0.15 m) head-on; tape: start 3.0 m, stop 0.5 m, retreat to 3.5 m; distance source = depth camera",
+  "outcome": "success",
+  "root_status_counts": {
+    "RUNNING": 480,
+    "SUCCESS": 1
+  },
+  "run_id": "20260819T205048Z_baseline_t2",
+  "schema": "ainex.run_metrics/1",
+  "tick_id_first": 1,
+  "tick_id_last": 481,
+  "ticks_total": 481
+}
