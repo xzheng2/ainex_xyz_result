@@ -1,0 +1,46 @@
+{
+  "body_id": "HW-ROBOPARKS676EF55C",
+  "calibration_sha256": {
+    "ainex_driver/ainex_kinematics/config/init_pose.yaml": "60eb2a7fe529792cb0658be813bbb3598bf53861814501112e67aae9bd488f91",
+    "ainex_driver/ainex_kinematics/config/servo_controller.yaml": "7a30872ba0132d9794a22f9f8cfde0cfba535b79d60d105bd7b6cdfa703fa135",
+    "ainex_driver/ainex_kinematics/config/walking_offset.yaml": "2d3f65098fd5e3949d4047502830f84fab8b679a93bb5f138875efeff4a14f75",
+    "ainex_driver/ainex_kinematics/config/walking_param.yaml": "30851fa49ea036a7e6b356703cafe2cdc3404607dec203bee024a66c54b7d827",
+    "expt_run_lab/config/bodies/HW-ROBOPARKS676EF55C.yaml": "3465ebe17525a95ae0610f730abcebdb2bbb1c513f0163ad99b1638cb10622ad"
+  },
+  "constants_sha256": {
+    "claude_hooks": "eb12345998c69f9366876f205c5ddab2c16a4b4f4038ca66d172ea0bf6342706",
+    "claude_skills": "0cfbd52396abead9e083c8ed4625586084c1e10b0a40b3c9b404f22bdb04f41d",
+    "expt_run_lab": "2195ddac03655a08289e97c3cd4fdd4a1f65e66b6a18d0d939bdaf661079ee2e",
+    "xyz_behavior_tools": "a1b07fa0619ba79346fcba8c2b5bb8297d5f539b6cfbfb2d39c6d70413ec077f",
+    "xyz_perception": "2caf54c2226eba798b25130d0ae7cfc845c9c2d177b8473a8d4b543495feab8b"
+  },
+  "created_utc": "20260819T181433Z",
+  "git": {
+    "available": true,
+    "branch": "run/sprint-c/t1",
+    "describe": "abl-20260819-lane-c-1-g4848836",
+    "dirty": false,
+    "dirty_count": 0,
+    "dirty_digest": null,
+    "dirty_sample": [],
+    "dirty_scope": [
+      "docker/ros_ws_src"
+    ],
+    "repo_dirty": false,
+    "repo_dirty_count": 0,
+    "root": "/home/pi",
+    "sha": "484883692faec43637cb9bd29354f92cb10425dc",
+    "subject": "lane c: sprint project built by agent"
+  },
+  "lane": "c",
+  "note": "",
+  "params": {
+    "agent_mode": "plan_then_auto",
+    "launch_cmd": "roslaunch xyz_behavior sprint.launch"
+  },
+  "run_id": "20260819T181433Z_baseline_t1",
+  "schema": "ainex.run_meta/2",
+  "study": "exp1",
+  "trial": 1,
+  "variant": "baseline"
+}

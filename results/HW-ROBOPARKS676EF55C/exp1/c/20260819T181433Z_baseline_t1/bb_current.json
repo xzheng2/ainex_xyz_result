@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "tick_id": 425,
+  "ts": 1787163679.535352,
+  "root_status": "Status.SUCCESS",
+  "blackboard": {
+    "/latched/tracked_objects": "{'apriltag': {'label': 'apriltag', 'shape': 'rect', 'x': 307.5, 'y': 175.0, 'error_x': -12.5, 'error_y': -65.0, 'size': 946.5, 'turn_bias_deg': -2.8624052261117474, 'tag_id': 111, 'direction': '', 'depth_mm': None, 'depth_m': None, 'cam_x_m': None, 'cam_y_m': None, 'cam_z_m': None, 'lost_count': 12, 'displacement': None}}",
+    "/latched/detection_source": "apriltag",
+    "/latched/apriltag_turn_bias": NaN,
+    "/latched/apriltag_direction": "",
+    "/latched/apriltag_tag_id": -1,
+    "/latched/robot_state": "stand",
+    "/node_state/sprint_stand_confirmed_approach": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 107}",
+    "/node_state/sprint_arrived": "{'stable_ticks': 3, 'latched': True, 'last_tick_id': 107}",
+    "/node_state/sprint_stand_confirmed_retreat": "{'stable_ticks': 5, 'latched': True, 'last_tick_id': 425}"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "closed_utc": "20260819T183144Z",
+  "duration_s_approx": 406.3,
+  "dwells": {
+    "sprint_arrived": {
+      "latch_count": 1,
+      "max_stable_ticks": 3,
+      "reset_count": 1,
+      "ticks_to_first_latch": 107
+    },
+    "sprint_stand_confirmed_approach": {
+      "latch_count": 1,
+      "max_stable_ticks": 5,
+      "reset_count": 0,
+      "ticks_to_first_latch": 107
+    },
+    "sprint_stand_confirmed_retreat": {
+      "latch_count": 1,
+      "max_stable_ticks": 5,
+      "reset_count": 0,
+      "ticks_to_first_latch": 425
+    }
+  },
+  "events_total": 8440,
+  "failure_mode": "",
+  "first_success_tick": 425,
+  "interventions": 0,
+  "log_present": true,
+  "node_status_counts": {
+    "ApproachControl": {
+      "RUNNING": 102,
+      "SUCCESS": 1
+    },
+    "ApproachPhase": {
+      "RUNNING": 106,
+      "SUCCESS": 1
+    },
+    "ArrivedConfirmed": {
+      "FAILURE": 100,
+      "RUNNING": 2,
+      "SUCCESS": 1
+    },
+    "DriveOrSearch": {
+      "SUCCESS": 100
+    },
+    "DriveToTag": {
+      "SUCCESS": 100
+    },
+    "FollowTag": {
+      "SUCCESS": 100
+    },
+    "IsStanding_Approach": {
+      "SUCCESS": 107
+    },
+    "IsStanding_Retreat": {
+      "SUCCESS": 319
+    },
+    "IsTagClose": {
+      "FAILURE": 100,
+      "SUCCESS": 3
+    },
+    "IsTagDetected_Approach": {
+      "SUCCESS": 100
+    },
+    "KeepApproaching": {
+      "RUNNING": 100
+    },
+    "RetreatControl": {
+      "RUNNING": 314,
+      "SUCCESS": 1
+    },
+    "RetreatPhase": {
+      "RUNNING": 318,
+      "SUCCESS": 1
+    },
+    "ReverseFromTag": {
+      "FAILURE": 1,
+      "RUNNING": 314
+    },
+    "SafetyGate_Approach": {
+      "RUNNING": 4,
+      "SUCCESS": 103
+    },
+    "SafetyGate_Retreat": {
+      "RUNNING": 4,
+      "SUCCESS": 315
+    },
+    "SprintMission": {
+      "RUNNING": 424,
+      "SUCCESS": 1
+    },
+    "StandConfirmed_Approach": {
+      "RUNNING": 4,
+      "SUCCESS": 103
+    },
+    "StandConfirmed_Retreat": {
+      "RUNNING": 4,
+      "SUCCESS": 315
+    },
+    "StopGait_Arrived": {
+      "SUCCESS": 1
+    },
+    "StopGait_RetreatDone": {
+      "SUCCESS": 1
+    },
+    "StopGait_TagLost": {
+      "SUCCESS": 1
+    }
+  },
+  "node_ticks": {
+    "ApproachControl": 103,
+    "ApproachPhase": 107,
+    "ArrivedConfirmed": 103,
+    "DriveOrSearch": 100,
+    "DriveToTag": 100,
+    "FollowTag": 100,
+    "IsStanding_Approach": 107,
+    "IsStanding_Retreat": 319,
+    "IsTagClose": 103,
+    "IsTagDetected_Approach": 100,
+    "KeepApproaching": 100,
+    "RetreatControl": 315,
+    "RetreatPhase": 319,
+    "ReverseFromTag": 315,
+    "SafetyGate_Approach": 107,
+    "SafetyGate_Retreat": 319,
+    "SprintMission": 425,
+    "StandConfirmed_Approach": 107,
+    "StandConfirmed_Retreat": 319,
+    "StopGait_Arrived": 1,
+    "StopGait_RetreatDone": 1,
+    "StopGait_TagLost": 1
+  },
+  "note": "AprilTag ID 111 size 0.15 m; measured start 3.0 m, stop 0.5 m, retreat to 3.5 m then stop; tape-measured by operator; instrument-validation run for items 12-18",
+  "outcome": "success",
+  "root_status_counts": {
+    "RUNNING": 424,
+    "SUCCESS": 1
+  },
+  "run_id": "20260819T181433Z_baseline_t1",
+  "schema": "ainex.run_metrics/1",
+  "tick_id_first": 1,
+  "tick_id_last": 425,
+  "ticks_total": 425
+}
