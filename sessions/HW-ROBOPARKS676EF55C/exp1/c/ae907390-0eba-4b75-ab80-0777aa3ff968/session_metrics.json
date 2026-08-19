@@ -1,0 +1,84 @@
+{
+  "api_responses": 121,
+  "clarification_answer_free_text": 0,
+  "clarification_answered": 4,
+  "clarification_calls": 1,
+  "clarification_questions": 4,
+  "clarification_rejected": 0,
+  "duration_s": 2521,
+  "file_path_calls": 38,
+  "files_touched": 25,
+  "first_ts": "2026-08-19T17:27:26.256Z",
+  "guard": {
+    "by_action": {
+      "blocked": 2,
+      "fs_unlink": 1,
+      "pass": 42,
+      "reminder": 17,
+      "warned": 2
+    },
+    "by_rule": {
+      "behavior.behaviours.bb_log_keys": 1,
+      "behavior.tree.missing_groot": 1,
+      "behavior_pre._groot.xml": 5,
+      "behavior_pre.app/": 1,
+      "behavior_pre.behaviours/": 1,
+      "behavior_pre.launch/": 1,
+      "behavior_pre.tree/": 9,
+      "bridge.bash_write": 1,
+      "coverage.behavior.app": 1,
+      "coverage.behavior.behaviours": 1,
+      "coverage.behavior.launch": 1,
+      "coverage.behavior.tree": 6,
+      "coverage.build": 1,
+      "coverage.tree": 8,
+      "fs.unlink": 1,
+      "tree.state_key_nonliteral": 1
+    },
+    "events": 64,
+    "fix_on_first_retry": 1.0,
+    "fixed_next_write": 3,
+    "no_following_write": 1,
+    "not_fixed_next_write": 0
+  },
+  "human_turns": 1,
+  "last_ts": "2026-08-19T18:09:27.164Z",
+  "lines": 438,
+  "prose_question_blocks": 3,
+  "prose_question_turns": 3,
+  "rework_events": 13,
+  "rework_files": 3,
+  "schema": "ainex.session_metrics/1",
+  "subagent_count": 3,
+  "subagent_types": {
+    "Explore": 3
+  },
+  "tokens": {
+    "cache_creation": 224446,
+    "cache_read": 12720694,
+    "input": 140,
+    "output": 95138,
+    "total": 13040418
+  },
+  "tokens_subagent": {
+    "cache_creation": 257048,
+    "cache_read": 2394707,
+    "input": 102,
+    "output": 16070,
+    "total": 2667927
+  },
+  "tool_calls_by_name": {
+    "Agent": 3,
+    "AskUserQuestion": 1,
+    "Bash": 108,
+    "Edit": 12,
+    "ExitPlanMode": 1,
+    "Read": 16,
+    "TaskCreate": 6,
+    "TaskUpdate": 10,
+    "ToolSearch": 2,
+    "Write": 10
+  },
+  "tool_calls_total": 169,
+  "tool_errors": 3
+}

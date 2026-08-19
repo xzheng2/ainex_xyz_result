@@ -1,0 +1,57 @@
+{
+  "body_id": "HW-ROBOPARKS676EF55C",
+  "cli_versions": [
+    "2.1.226"
+  ],
+  "cwd": "/home/pi",
+  "exported_utc": "20260819T183306Z",
+  "git": {
+    "available": true,
+    "branch": "run/sprint-c/t1",
+    "describe": "abl-20260819-lane-c-1-g4848836",
+    "dirty": false,
+    "dirty_count": 0,
+    "dirty_digest": null,
+    "dirty_sample": [],
+    "dirty_scope": [
+      "docker/ros_ws_src"
+    ],
+    "repo_dirty": false,
+    "repo_dirty_count": 0,
+    "root": "/home/pi",
+    "sha": "484883692faec43637cb9bd29354f92cb10425dc",
+    "subject": "lane c: sprint project built by agent"
+  },
+  "lane": "c",
+  "main_transcript": true,
+  "schema": "ainex.session_meta/1",
+  "session_id": "ae907390-0eba-4b75-ab80-0777aa3ff968",
+  "slug": "create-a-sprint-event-idempotent-stream",
+  "study": "exp1",
+  "subagents": [
+    {
+      "agent_id": "a284fa15e6afe40f9",
+      "agent_type": "Explore",
+      "description": "Explore apriltag perception and adapters",
+      "lines": 55,
+      "spawn_depth": 1,
+      "tool_use_id": "toolu_017WV93PEEvZ4d4evoQcQQfh"
+    },
+    {
+      "agent_id": "a32e997141cb7f80c",
+      "agent_type": "Explore",
+      "description": "Explore existing BT projects and scaffolding",
+      "lines": 83,
+      "spawn_depth": 1,
+      "tool_use_id": "toolu_018H4wcbYZCTrsNyeMuDN4vi"
+    },
+    {
+      "agent_id": "aa4293a23ed4d1194",
+      "agent_type": "Explore",
+      "description": "Explore BT lib core and L1/L2 behaviours",
+      "lines": 71,
+      "spawn_depth": 1,
+      "tool_use_id": "toolu_014Xeh9FokC25DiTsy2hviU6"
+    }
+  ]
+}
