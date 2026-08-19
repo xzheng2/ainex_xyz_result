@@ -1,0 +1,80 @@
+{
+  "api_responses": 87,
+  "clarification_answer_free_text": 0,
+  "clarification_answered": 4,
+  "clarification_calls": 1,
+  "clarification_questions": 4,
+  "clarification_rejected": 0,
+  "duration_s": 3116,
+  "file_path_calls": 17,
+  "files_touched": 17,
+  "first_ts": "2026-08-19T19:27:53.236Z",
+  "guard": {
+    "by_action": {
+      "blocked": 1,
+      "fs_unlink": 1,
+      "pass": 12,
+      "reminder": 5,
+      "warned": 1
+    },
+    "by_rule": {
+      "behavior.groot.missing_bt": 1,
+      "behavior_pre._groot.xml": 1,
+      "behavior_pre.app/": 1,
+      "behavior_pre.behaviours/": 1,
+      "behavior_pre.launch/": 1,
+      "behavior_pre.tree/": 1,
+      "bridge.bash_write": 1,
+      "coverage.behavior.app": 1,
+      "coverage.behavior.behaviours": 1,
+      "coverage.behavior.launch": 1,
+      "coverage.behavior.tree": 1,
+      "coverage.build": 1,
+      "coverage.tree": 1,
+      "fs.unlink": 1
+    },
+    "events": 20,
+    "fix_on_first_retry": 1.0,
+    "fixed_next_write": 1,
+    "no_following_write": 1,
+    "not_fixed_next_write": 0
+  },
+  "human_turns": 1,
+  "last_ts": "2026-08-19T20:19:49.448Z",
+  "lines": 346,
+  "prose_question_blocks": 3,
+  "prose_question_turns": 3,
+  "rework_events": 0,
+  "rework_files": 0,
+  "schema": "ainex.session_metrics/1",
+  "subagent_count": 3,
+  "subagent_types": {
+    "Explore": 3
+  },
+  "tokens": {
+    "cache_creation": 168709,
+    "cache_read": 4589423,
+    "input": 70,
+    "output": 67159,
+    "total": 4825361
+  },
+  "tokens_subagent": {
+    "cache_creation": 294473,
+    "cache_read": 2730935,
+    "input": 102,
+    "output": 6319,
+    "total": 3031829
+  },
+  "tool_calls_by_name": {
+    "Agent": 3,
+    "AskUserQuestion": 1,
+    "Bash": 107,
+    "Edit": 1,
+    "ExitPlanMode": 1,
+    "Read": 10,
+    "ToolSearch": 1,
+    "Write": 6
+  },
+  "tool_calls_total": 130,
+  "tool_errors": 2
+}

@@ -1,0 +1,57 @@
+{
+  "body_id": "HW-ROBOPARKS676EF55C",
+  "cli_versions": [
+    "2.1.226"
+  ],
+  "cwd": "/home/pi",
+  "exported_utc": "20260819T202543Z",
+  "git": {
+    "available": true,
+    "branch": "run/sprint-c/t2",
+    "describe": "abl-20260819-lane-c-1-ga778cc0",
+    "dirty": false,
+    "dirty_count": 0,
+    "dirty_digest": null,
+    "dirty_sample": [],
+    "dirty_scope": [
+      "docker/ros_ws_src"
+    ],
+    "repo_dirty": false,
+    "repo_dirty_count": 0,
+    "root": "/home/pi",
+    "sha": "a778cc04e3f7b8b541232420db20e795a1b72fb8",
+    "subject": "lane c: sprint project built by agent"
+  },
+  "lane": "c",
+  "main_transcript": true,
+  "schema": "ainex.session_meta/1",
+  "session_id": "ce63280f-f1eb-4328-ab8f-ec56132a67dd",
+  "slug": "create-a-sprint-event-luminous-newt",
+  "study": "exp1",
+  "subagents": [
+    {
+      "agent_id": "a68ee3e6985fc0939",
+      "agent_type": "Explore",
+      "description": "Explore xyz_behavior projects layout",
+      "lines": 84,
+      "spawn_depth": 1,
+      "tool_use_id": "toolu_01JR2dCifm61Gg2Y6jxAnsqa"
+    },
+    {
+      "agent_id": "af94c34ccb085211a",
+      "agent_type": "Explore",
+      "description": "Explore xyz_bt_lib nodes and adapters",
+      "lines": 67,
+      "spawn_depth": 1,
+      "tool_use_id": "toolu_012L1tQPFULiZcVZeL5jZ7zH"
+    },
+    {
+      "agent_id": "afa38f5116c824df0",
+      "agent_type": "Explore",
+      "description": "Explore apriltag perception node",
+      "lines": 67,
+      "spawn_depth": 1,
+      "tool_use_id": "toolu_01Jae6ZFMSofMNrsjsL4XyVK"
+    }
+  ]
+}
